@@ -6,10 +6,45 @@
 
 > **A comprehensive, academically structured curated list of world model research.**  
 > Organized by paradigm (Generative · Representational · Agentic), then by domain/task, then by architecture.  
-> Covering Embodied AI · Autonomous Driving · Game Simulation · Scientific Modeling · NLP Agents · 3D/4D Scene Understanding.
+---
+## Definition and scope
+
+### A short working definition
+
+A **world model** is an internal predictive model of an environment that helps an agent answer some version of:
+
+> **What will happen if I act, wait, intervene, or imagine an alternative future?**
+
+That definition is intentionally broader than model-based RL, but narrower than "any model that understands the world".
+
+### World model vs. nearby concepts
+
+| Concept | Core question | Typical output |
+| --- | --- | --- |
+| world model | what happens next under state, action, or intervention? | future observations, latent states, occupancy, trajectories, or executable rollouts |
+| simulator | can the environment be replayed or executed? | environment transitions, often hand-built or learned |
+| planner / policy | what should the agent do? | actions, plans, control sequences |
+| perception model | what is in the scene now? | labels, detections, depth, segmentation |
+
+### Three consistency checks
+
+These three checks are useful when deciding whether a new paper belongs on the list:
+
+- **Modality consistency**: can the model connect language, perception, action, and state in a coherent way?
+- **Spatial consistency**: does it preserve object identity, geometry, layout, and 3D structure?
+- **Temporal consistency**: does it model how the world evolves over time, especially under actions or interventions?
+
+### A practical boundary
+
+A paper is strongest as a world-model entry when it does at least two of the following:
+
+1. models state,
+2. predicts state evolution under action or intervention,
+3. supports imagination, planning, evaluation, or controllable simulation.
+
+If it only renders plausible video frames without state, action, or decision relevance, it is usually better treated as a neighboring generative model rather than a core world model.
 
 ---
-
 ## 📖 Table of Contents
 
 - [Taxonomic Overview](#-taxonomic-overview)
