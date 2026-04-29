@@ -766,17 +766,14 @@ If you find this repository useful in your research, please consider citing the 
 
 ---
 
-## ✏️ Contributing
+## Contribution guide
 
-We welcome contributions! Please submit a pull request with:
-1. **Paper name** + authors
-2. **Venue** and **year**
-3. **One-sentence contribution summary**
-4. **Links** (arXiv, code, website)
-5. **Correct section** following the taxonomy above
+PRs are welcome. The preferred entry format is:
 
-For large additions or structural suggestions, please open an issue first.
-
----
-
-*Last updated: April 2026. Maintained with ❤️ by the world modeling research community.*
+```markdown
+- **Paper / Project Name** (Year) `Task` `Architecture`
+  One-sentence reason this entry matters.
+  [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)
+  [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/...)
+  [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://...)
+```
