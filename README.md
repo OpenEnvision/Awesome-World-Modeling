@@ -718,49 +718,16 @@ World Models
 
 ---
 
-## 🔗 Related Awesome Lists
-
-- [Awesome-World-Models (knightnemo)](https://github.com/knightnemo/Awesome-World-Models) — General world models; embodied AI, driving, NLP
-- [Awesome-World-Model for AD (LMD0311)](https://github.com/LMD0311/Awesome-World-Model) — Autonomous driving world models survey companion
-- [Awesome-World-Models for Robotics (leofan90)](https://github.com/leofan90/Awesome-World-Models) — Robotics-focused collection
-- [Awesome-World-Model-Evolution (OpenRaiser)](https://github.com/OpenRaiser/awesome-world-model-evolution) — Evolutionary taxonomy of world models
-- [AwesomeWorldModels (Li-Zn-H)](https://github.com/Li-Zn-H/AwesomeWorldModels) — Companion to embodied AI survey (arXiv 2510.16732)
-- [Awesome Physics Cognition in Video Generation](https://github.com/minnie-lin/Awesome-Physics-Cognition-based-Video-Generation)
-- [AwesomeRobustDWM](https://github.com/MoyangSensei/AwesomeRobustDWM) — Robustness-aware driving world models
-
----
-
 ## 📝 Citation
 
 If you find this repository useful in your research, please consider citing the key survey papers that underpin it:
 
 ```bibtex
-@article{hafner2023dreamerv3,
-  title={Mastering Diverse Domains with World Models},
-  author={Hafner, Danijar and Lillicrap, Timothy and Norouzi, Mohammad and Ba, Jimmy},
-  journal={arXiv preprint arXiv:2301.04104},
-  year={2023}
-}
-
 @misc{lecun2022path,
   title={A Path Towards Autonomous Machine Intelligence},
   author={LeCun, Yann},
   year={2022},
   howpublished={OpenReview}
-}
-
-@article{tu2025drivingworldmodel,
-  title={The Role of World Models in Shaping Autonomous Driving: A Comprehensive Survey},
-  author={Tu, Sifan and Zhou, Xin and Liang, Dingkang and others},
-  journal={arXiv preprint arXiv:2502.10498},
-  year={2025}
-}
-
-@article{ha2018worldmodels,
-  title={World Models},
-  author={Ha, David and Schmidhuber, J{\"u}rgen},
-  journal={arXiv preprint arXiv:1803.10122},
-  year={2018}
 }
 ```
 
