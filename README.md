@@ -170,6 +170,7 @@ World Models
 ---
 
 ## 1 · Generative World Models
+<img src="image/generative_wm.png" alt="Generative World Model" width="100%">
 
 > Generative world models explicitly synthesize sensory observations (pixels, point clouds, tokens) of plausible futures conditioned on actions or language. Their primary value is as **learned simulators** and **data augmenters**.
 
