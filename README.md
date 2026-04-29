@@ -13,10 +13,9 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 
 </div>
 
-| Core capability map | Historical wave map |
-| --- | --- |
-| <img src="image/generative_wm.png" alt="world model capability stack" width="100%"> | <img src="image/world_qa.png" alt="world model historical waves" width="100%"> |
-
+| Historical wave map |
+| --- |
+| <img src="image/world_qa.png" alt="world model historical waves" width="100%"> |
 > This README is optimized for fast reading: first understand the scope, then jump by paradigm, then scan the newest verified additions.
 
 ## Definition and scope
