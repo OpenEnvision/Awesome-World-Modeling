@@ -117,6 +117,14 @@ World Models
 ```
 
 ---
+### Working definitions
+
+- **Mind World Model**: the biological and cognitive intuition that an intelligent system carries an internal model of the world and uses it for prediction, imagination, and counterfactual reasoning.
+- **Generative World Model**: predicts or synthesizes plausible future observations, often pixels, video, occupancy, or point clouds.
+- **Representational World Model**: predicts future *state* or *latent structure* without requiring photorealistic decoding.
+- **World Foundation Model (WFM)**: a pretrained model of environment structure and dynamics that can support simulation, planning, forecasting, or data generation across downstream tasks.
+- **Agentic World Model**: a WFM coupled with action selection, planning, memory, tool use, or policy optimization in a closed loop.
+---
 
 ## 0 · Mind World Models — Biological Origins & Foundational Definitions
 
