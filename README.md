@@ -38,14 +38,6 @@ That definition is intentionally broader than model-based RL, but narrower than 
 | planner / policy | what should the agent do? | actions, plans, control sequences |
 | perception model | what is in the scene now? | labels, detections, depth, segmentation |
 
-### Three consistency checks
-
-These checks are useful when deciding whether a paper really belongs here:
-
-- **Modality consistency**: can it connect language, perception, action, and state coherently?
-- **Spatial consistency**: does it preserve geometry, layout, identity, and 3D structure?
-- **Temporal consistency**: does it model how the world evolves over time, especially under actions or interventions?
-
 ### A practical boundary
 
 A paper is strongest as a world-model entry when it does at least two of the following:
@@ -56,15 +48,7 @@ A paper is strongest as a world-model entry when it does at least two of the fol
 
 If it only renders plausible video frames without state, action, or decision relevance, it is usually better treated as a neighboring generative model rather than a core world model.
 
-### Badge legend
-
-- `Paper`: [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org)
-- `Code`: [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com)
-- `Project`: [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://example.com)
-
 ## 📖 Table of Contents
-
-- [Freshly Added in This Revision](#-freshly-added-in-this-revision)
 - [Taxonomic Overview](#-taxonomic-overview)
 - [0 · Mind World Models — Biological Origins & Foundational Definitions](#0--mind-world-models--biological-origins--foundational-definitions)
 - [1 · Generative World Models](#1--generative-world-models)
@@ -92,34 +76,6 @@ If it only renders plausible video frames without state, action, or decision rel
 - [Citation](#-citation)
 
 ---
-
-## 🚀 Freshly Added in This Revision
-
-> New papers below were manually cross-checked against arXiv on **April 29, 2026** and selected because they materially improve coverage instead of just inflating count.
-
-### 2026 survey / theory additions
-
-- **Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.22748)
-- **Human Cognition in Machines: A Unified Perspective of World Models** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2604.16592-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.16592)
-- **Video Generation Models as World Models: Efficient Paradigms, Architectures and Algorithms** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2603.28489-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.28489)
-- **The Trinity of Consistency as a Defining Principle for General World Models** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2602.23152-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.23152)
-- **A Mechanistic View on Video Generation as World Models: State and Dynamics** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2601.17067-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.17067)
-
-### 2026 game / embodied / 3D additions
-
-- **Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2604.08995-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.08995) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://matrix-game-v3.github.io/)
-- **WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2603.16871-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.16871) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://cvlab-kaist.github.io/WorldCam/)
-- **Solaris: Building a Multiplayer Video World Model in Minecraft** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2602.22208-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.22208) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://solaris-wm.github.io/)
-- **HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2604.14268-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.14268) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Tencent-Hunyuan/HY-World-2.0) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://3d-models.hunyuan.tencent.com/world/)
-- **GeoWorld: Geometric World Models** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2602.23058-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.23058) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://steve-zeyu-zhang.github.io/GeoWorld)
-
-### 2026 driving / evaluation additions
-
-- **UniDriveDreamer: A Single-Stage Multimodal World Model for Autonomous Driving** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2602.02002-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.02002)
-- **UniDrive-WM: Unified Understanding, Planning and Generation World Model for Autonomous Driving** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2601.04453-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.04453) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://unidrive-wm.github.io/UniDrive-WM)
-- **X-World: Controllable Ego-Centric Multi-Camera World Models for Scalable End-to-End Driving** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2603.19979-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.19979)
-- **ResWorld: Temporal Residual World Model for End-to-End Autonomous Driving** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2602.10884-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.10884) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/mengtan00/ResWorld)
-- **WorldMark: A Unified Benchmark Suite for Interactive Video World Models** (2026) [![arXiv](https://img.shields.io/badge/arXiv-2604.21686-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.21686)
 
 ## 🗺 Taxonomic Overview
 
