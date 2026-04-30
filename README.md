@@ -994,21 +994,6 @@ World Models
 - **How Smart Do We Want AI to Be?** — CNET (2025). [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://www.cnet.com/science/how-smart-do-we-want-ai-to-be-world-models-may-understand-things-better-than-we-do/)
 - **World Models Become Auto Autonomy's New Driver** — China Daily (2025). [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://subsites.chinadaily.com.cn/auto/2025-12/08/c_1095274.htm)
 
-### 中文技术博客 (Chinese Technical Blogs)
-
-- **世界模型，真的很Awesome** — 知乎 (2025). [![Blog](https://img.shields.io/badge/Blog-知乎-1772F6?logo=zhihu&logoColor=white)](https://zhuanlan.zhihu.com/p/451179856)
-- **世界模型是不是机器人下一个“奇点时刻”？** — 知乎 (2025). [![Blog](https://img.shields.io/badge/Blog-知乎-1772F6?logo=zhihu&logoColor=white)](https://www.zhihu.com/question/667574492)
-- **ICML 2025 | 神经网络何时学到世界模型？** — CSDN (2025). [![Blog](https://img.shields.io/badge/Blog-CSDN-FC5531?logo=c&logoColor=white)](https://blog.csdn.net/)
-- **在2025年初，浅浅聊一聊世界模型** — CSDN (2025). [![Blog](https://img.shields.io/badge/Blog-CSDN-FC5531?logo=c&logoColor=white)](https://blog.csdn.net/)
-- **LeCun亲自出镜打脸质疑者！** — 澎湃新闻 (2025). [![Blog](https://img.shields.io/badge/Blog-澎湃-FF6B35?logo=wechat&logoColor=white)](https://www.thepaper.cn/newsDetail_forward_28345713)
-- **Fei-Fei Li vs LeCun: The Debate on World Models** — 36氪 (2025). [![Blog](https://img.shields.io/badge/Blog-36氪-00C4FF?logo=wechat&logoColor=white)](https://36kr.com/p/3112751459316229)
-- **Google DeepMind CEO: World Models Are the Future** — IT之家 (2025). [![Blog](https://img.shields.io/badge/Blog-IT之家-FF0033?logo=wechat&logoColor=white)](https://m.ithome.com/html/792514.htm)
-- **2025年中国世界模型发展洞察** — 沙利文 (2025). [![Blog](https://img.shields.io/badge/Blog-沙利文-1E3A5F?logo=readthedocs&logoColor=white)](https://www.frostchina.com/)
-- **拒绝“黑盒玄学”！2026重磅论文拆解** — CSDN (2026). [![Blog](https://img.shields.io/badge/Blog-CSDN-FC5531?logo=c&logoColor=white)](https://blog.csdn.net/)
-- **CVPR 2026 世界模型成果盘点** — CSDN (2026). [![Blog](https://img.shields.io/badge/Blog-CSDN-FC5531?logo=c&logoColor=white)](https://blog.csdn.net/)
-- **CVPR 2026 世界模型论文全景梳理** — 网易 (2026). [![Blog](https://img.shields.io/badge/Blog-网易-EA2C2C?logo=wechat&logoColor=white)](https://www.163.com/dy/article/JUQQF1K90511D6RL.html)
-- **突破“不可能三角”！** — 知乎 (2026). [![Blog](https://img.shields.io/badge/Blog-知乎-1772F6?logo=zhihu&logoColor=white)](https://zhuanlan.zhihu.com/p/1910348558452604928)
-
 <p align="right"><a href="#-awesome-world-models">🔝 Back to Top</a></p>
 
 ---
