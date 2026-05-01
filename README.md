@@ -16,9 +16,9 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 
 </div>
 
-| Historical wave map |
-| --- |
-| <img src="image/world_qa.png" alt="world model historical waves" width="100%"> |
+| internal & external "world model" | Historical wave map |
+| :---: | :---: |
+| ![internal & external world model](image/lecun_wm.png) | ![Historical wave map](image/world_qa.png) |
 
 ---
 
