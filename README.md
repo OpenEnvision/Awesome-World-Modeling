@@ -11,8 +11,6 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-**Canonical repository:** [OpenEnvision/Awesome-World-Models](https://github.com/OpenEnvision/Awesome-World-Models)
-
 *Latest curation pass verified against arXiv on **June 8, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
