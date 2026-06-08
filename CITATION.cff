@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this curated list in your research, please cite it."
+title: "Awesome World Models"
+authors:
+  - name: "OpenEnvision Contributors"
+repository-code: "https://github.com/OpenEnvision/Awesome-World-Models"
+url: "https://github.com/OpenEnvision/Awesome-World-Models"
+abstract: "A scope-aware, paper-first curated list of world model research organized by generative, representational, and agentic paradigms."
+keywords:
+  - world models
+  - embodied AI
+  - robotics
+  - autonomous driving
+  - model-based reinforcement learning
+  - video generation
+  - world action models
+  - benchmarks
+license: CC0-1.0
+date-released: 2026-06-08
+version: "2026.06"
