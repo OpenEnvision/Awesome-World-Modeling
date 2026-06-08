@@ -4,7 +4,6 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Models?style=social)](https://github.com/OpenEnvision/Awesome-World-Models/stargazers)
-[![Lint](https://github.com/OpenEnvision/Awesome-World-Models/actions/workflows/lint.yml/badge.svg)](https://github.com/OpenEnvision/Awesome-World-Models/actions/workflows/lint.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/OpenEnvision/Awesome-World-Models/pulls)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://github.com/OpenEnvision/Awesome-World-Models/blob/main/LICENSE)
 [![Last Updated](https://img.shields.io/badge/Updated-June%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Models/commits/main/README.md)
