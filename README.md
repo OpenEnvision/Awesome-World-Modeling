@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 8, 2026**.*
+*Latest curation pass verified against arXiv on **June 12, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -361,8 +361,11 @@ World Models
 - **Cosmos-Drive-Dreams** — "Cosmos-Drive-Dreams: Scalable Synthetic Driving Data Generation with World Foundation Models." *arXiv* 2506.09042 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2506.09042-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.09042) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://research.nvidia.com/labs/toronto-ai/cosmos_drive_dreams)
   > NVIDIA's Cosmos-based large-scale synthetic data pipeline for autonomous driving.
 
-- **NVIDIA OmniDreams** — "NVIDIA OmniDreams: Real-Time Generative World Model for Closed-Loop Autonomous Vehicle Simulation." *arXiv* 2606.03159 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.03159-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.03159) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://research.nvidia.com/labs/sil/shared/index.html?target=projects%2Fomnidreams-blog)
+- **NVIDIA OmniDreams** — "NVIDIA OmniDreams: Real-Time Generative World Model for Closed-Loop Autonomous Vehicle Simulation." *arXiv* 2606.03159 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.03159-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.03159) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://research.nvidia.com/labs/sil/projects/omnidreams-blog/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/nv-tlabs/omni-dreams)
   > Cosmos-based real-time, action-conditioned driving simulator for closed-loop policy evaluation under novel weather, traffic, and long-tail dynamics.
+
+- **HorizonDrive** — "HorizonDrive: Self-Corrective Autoregressive World Model for Long-horizon Driving Simulation." *arXiv* 2605.11596 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.11596-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.11596) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://zcliangyue.github.io/HorizonDrive/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/zcliangyue/HorizonDrive)
+  > Self-corrective autoregressive driving world model that extends teacher rollout supervision for long-horizon closed-loop simulation.
 
 - **GEM** — "GEM: A Generalizable Ego-Vision Multimodal World Model for Fine-Grained Ego-Motion, Object Dynamics, and Scene Composition Control." *arXiv* 2412.11198 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2412.11198-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.11198) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://vita-epfl.github.io/GEM.github.io/)
 
@@ -566,6 +569,12 @@ World Models
 - **OSCAR** — "OSCAR: Omni-Embodiment Action-Conditioned World Model for Robotics." *arXiv* 2606.04463 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.04463-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.04463) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://wuzy2115.github.io/oscar-project-page/)
   > Action-conditioned robot video world model that uses kinematic skeleton conditioning to generalize policy evaluation across robot embodiments.
 
+- **WEAVER** — "WEAVER, Better, Faster, Longer: An Effective World Model for Robotic Manipulation." *arXiv* 2606.13672 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13672-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13672) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://arnavkj1995.github.io/WEAVER/)
+  > Multi-view robotic manipulation world model that jointly targets fidelity, long-horizon consistency, and fast rollout for policy evaluation and planning.
+
+- **EA-WM** — "EA-WM: Event-Aware World Models with Task-Specification Grounding for Long-Horizon Manipulation." *arXiv* 2606.13053 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13053-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13053)
+  > Adds predicate-level event prediction and verification so imagined manipulation futures can be scored for task progress and physical feasibility.
+
 - **WoW** — "WoW: Towards a World omniscient World model Through Embodied Interaction." *arXiv* 2509.22642 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2509.22642-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22642) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://wow-world-model.github.io) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/wow-world-model/wow-world-model)
   > Large embodied-interaction world model that targets broad scene and object dynamics through active interaction.
 
@@ -666,6 +675,9 @@ World Models
 - **EfficientNWM** — "An Efficient and Multi-Modal Navigation System with One-Step World Model." *arXiv* 2601.12277 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2601.12277-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.12277) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://robotnav-bot.github.io/nav-onestepwm/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/robotnav-bot/NOW)
   > Compresses navigation prediction into a one-step multi-modal world model for faster planning.
 
+- **NavWAM** — "NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation." *arXiv* 2606.13494 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13494-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13494) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://dachii-azm.github.io/navwam/)
+  > Turns navigation world-model foresight into executable action by jointly modeling future observations, goal progress, and action chunks.
+
 - **MUN** — "Learning World Models for Unconstrained Goal Navigation." *NeurIPS* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2411.02446-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.02446) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/RU-Automated-Reasoning-Group/MUN)
   > A clean goal-navigation formulation where the learned world model supports unconstrained goal reaching rather than one fixed task.
 
@@ -727,6 +739,9 @@ World Models
 - **Lifting Embodied World Models for Planning and Control** — *arXiv* 2604.26182 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2604.26182-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.26182)
   > Lifts low-level action spaces into more interpretable high-level controls, making embodied world-model planning substantially easier.
 
+- **MotionWAM** — "MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation." *arXiv* 2606.09215 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.09215-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09215)
+  > Real-time humanoid WAM that conditions whole-body motion tokens on intermediate denoising features from an egocentric video world model.
+
 - **Ego-VCP** — "Ego-Vision World Model for Humanoid Contact Planning." *arXiv* 2510.11682 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2510.11682-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.11682) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://ego-vcp.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/HybridRobotics/Ego-VCP)
   > Egocentric world model for humanoid contact planning, a useful bridge between vision prediction and full-body control.
 
@@ -749,6 +764,12 @@ World Models
 
 - **WLA** — "World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis." *arXiv* 2606.05979 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.05979-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.05979)
   > Defines world-language-action models that jointly predict textual subtasks, subgoal images, and robot actions, bridging WAM-style dynamics and VLA-style language reasoning.
+
+- **World Pilot** — "World Pilot: Steering Vision-Language-Action Models with World-Action Priors." *arXiv* 2606.12403 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.12403-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.12403) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://world-pilot.github.io/)
+  > Injects WAM-derived scene-evolution and trajectory priors into VLA policies, bridging semantic grounding with contact-rich dynamics.
+
+- **Efficient-WAM** — "Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination." *arXiv* 2606.10040 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.10040-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.10040)
+  > Reduces the inference cost of future imagination with sparse video latents and asymmetric video-action denoising for robot deployment.
 
 - **RealDreamer** — "RealDreamer: Real-World Robotic Manipulation Using Imagination." *arXiv* 2406.12063 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2406.12063-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12063)
 
@@ -1295,6 +1316,9 @@ World Models
 
 - **MetaWorld** — "MetaWorld: Scaling Multi-Agent Video World Model from Single-view Video Data." *arXiv* 2606.02753 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.02753-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02753)
   > Extracts shared multi-agent world-state signals from ordinary single-view video, improving cross-view identity and dynamics consistency without dense multi-camera data.
+
+- **Prisma-World** — "Prisma-World: Camera-Controllable Multi-Agent Video World Model." *arXiv* 2606.09507 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.09507-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09507) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://huiqiang-sun.github.io/prisma-world/)
+  > Joint geometry-aware denoising for multiple camera-controlled agents, targeting cross-view consistency in a shared generated world.
 
 - **ShareVerse** — "ShareVerse: Multi-Agent Consistent Video Generation for Shared World Modeling." *arXiv* 2603.02697 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.02697-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.02697)
   > Explicitly targets a shared multi-agent world state across viewpoints, filling a gap between single-user interaction and jointly consistent world generation.
