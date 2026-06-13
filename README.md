@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 12, 2026**.*
+*Latest curation pass verified against arXiv on **June 13, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -771,6 +771,12 @@ World Models
 - **Efficient-WAM** — "Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination." *arXiv* 2606.10040 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.10040-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.10040)
   > Reduces the inference cost of future imagination with sparse video latents and asymmetric video-action denoising for robot deployment.
 
+- **RepWAM** — "RepWAM: World Action Modeling with Representation Visual-Action Tokenizers." *arXiv* 2606.13674 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13674-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13674)
+  > Trains representation visual-action tokenizers so WAM futures and latent actions are aligned for language-conditioned closed-loop manipulation.
+
+- **MaskWAM** — "MaskWAM: Unifying Mask Prompting and Prediction for World-Action Models." *arXiv* 2606.13515 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13515-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13515)
+  > Makes WAM prediction object-centric by using masks both as prompts and future supervision, reducing background bias in manipulation rollouts.
+
 - **RealDreamer** — "RealDreamer: Real-World Robotic Manipulation Using Imagination." *arXiv* 2406.12063 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2406.12063-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12063)
 
 - **Scaling Offline Model-Based RL via Jointly-Optimized World-Action Model Pretraining** — *ICLR* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2410.00564-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.00564)
@@ -929,6 +935,9 @@ World Models
 - **AnchorWorld** — "AnchorWorld: Embodied Egocentric World Simulation with View-based Evolution Customization." *arXiv* 2606.07326 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.07326-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.07326)
   > Uses 3D human motion and anchor-view customization to keep egocentric interactive world simulation spatially grounded and controllable over evolving scenes.
 
+- **MoVerse** — "MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold." *arXiv* 2606.13376 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13376-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13376)
+  > Builds a persistent panoramic Gaussian scaffold from a narrow-FOV image, then renders controllable real-time views for interactive world exploration.
+
 [⬆ Back to Top](#-table-of-contents)
 
 ---
@@ -1021,6 +1030,9 @@ World Models
 - **Causal Forcing++** — "Causal Forcing++: Efficient Autoregressive Video Diffusion for Interactive World Models." *arXiv* 2605.15141 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.15141-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.15141)
   > Updates causal-forcing-style video diffusion with more efficient interactive rollout training and inference.
 
+- **Next Forcing** — "Next Forcing: Causal World Modeling with Multi-Chunk Prediction." *arXiv* 2606.11187 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.11187-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.11187)
+  > Adds multi-chunk prediction to causal video world models, improving training signal and reducing iterative denoising cost for long rollouts.
+
 - **Helios** — "Helios: Real Real-Time Long Video Generation Model." *arXiv* 2603.04379 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.04379-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.04379) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://pku-yuangroup.github.io/Helios-Page/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/PKU-YuanGroup/Helios)
   > Real-time long-video generation system relevant to live neural simulators.
 
@@ -1094,6 +1106,9 @@ World Models
 - **V-JEPA 2.1** — "V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning." *arXiv* 2603.14482 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.14482-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.14482) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/facebookresearch/vjepa2)
   > Updates V-JEPA with denser video features, improving its usefulness as a predictive representation backbone.
 
+- **FF-JEPA** — "FF-JEPA: Long-Horizon Planning in World Models with Latent Planners." *arXiv* 2606.09311 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.09311-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09311)
+  > Adds a hierarchical latent planner to JEPA-style forward models so long-horizon planning need not rely only on expensive CEM action search.
+
 - **LeJEPA Theory** — Klindt, D., LeCun, Y. & Balestriero, R. "When Does LeJEPA Learn a World Model?" *arXiv* 2605.26379 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.26379-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.26379)
   > Provides identifiability conditions under which JEPA-style embeddings recover latent world variables useful for planning.
 
@@ -1156,6 +1171,9 @@ World Models
 
 - **Spatial Memory** — "Video World Models with Long-term Spatial Memory." *arXiv* 2506.05284 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2506.05284-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.05284) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://spmem.github.io)
   > Adds explicit long-term spatial memory to video world models for persistent scene state.
+
+- **Mirage / Latent Spatial Memory** — "Latent Spatial Memory for Video World Models." *arXiv* 2606.09828 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.09828-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09828)
+  > Stores persistent 3D scene information directly in diffusion latent space, avoiding lossy RGB reconstruction loops during memory retrieval.
 
 - **CLAW** — "CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization." *arXiv* 2606.04130 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.04130-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.04130)
   > Learns continuous latent actions from action-free videos, broadening latent-action world modeling beyond labeled robotics and games.
@@ -1522,9 +1540,11 @@ World Models
 | **WorldArena** | Embodied | Perception and functional utility under embodiment | [![arXiv](https://img.shields.io/badge/arXiv-2602.08971-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.08971) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://world-arena.ai) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/tsinghua-fib-lab/WorldArena) |
 | **MIND** | Interactive video | Memory consistency and action control | [![arXiv](https://img.shields.io/badge/arXiv-2602.08025-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.08025) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/CSU-JPG/MIND) |
 | **MBench** | Video world models | Long-horizon memory capability and internal state stability | [![arXiv](https://img.shields.io/badge/arXiv-2606.00793-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.00793) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://peanutup.github.io/MBench-project/) |
+| **Echo-Memory** | Action-conditioned video | Controlled comparison of memory storage and retrieval mechanisms | [![arXiv](https://img.shields.io/badge/arXiv-2606.09803-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09803) |
 | **Omni-WorldBench** | Interactive video | Interaction-centric comprehensive evaluation | [![arXiv](https://img.shields.io/badge/arXiv-2603.22212-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.22212) |
 | **STEVO-Bench** | Video world models | State evolution under occlusion and lookaway control | [![arXiv](https://img.shields.io/badge/arXiv-2603.13215-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.13215) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://glab-caltech.github.io/STEVOBench/) |
 | **WorldMark** | Interactive video | Unified interactive video WM benchmark | [![arXiv](https://img.shields.io/badge/arXiv-2604.21686-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.21686) |
+| **WorldOlympiad** | Video world models | Physical faithfulness, geometric consistency, and interaction fidelity | [![arXiv](https://img.shields.io/badge/arXiv-2606.11129-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.11129) |
 | **Toward Stable World Models** | Generative environments | World instability and long-horizon consistency | [![arXiv](https://img.shields.io/badge/arXiv-2503.08122-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.08122) |
 | **WBench** | Interactive video | Multi-turn interaction, consistency, physics compliance | [![arXiv](https://img.shields.io/badge/arXiv-2605.25874-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.25874) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://meituan-longcat.github.io/WBench/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/meituan-longcat/WBench) |
 | **VRAG Benchmark** | Interactive video | Action grounding and rollout evaluation for interactive video generation | [![arXiv](https://img.shields.io/badge/arXiv-2505.21996-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.21996) |
