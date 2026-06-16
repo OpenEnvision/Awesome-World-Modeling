@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 16, 2026**.*
+*Latest curation pass verified against arXiv on **June 17, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -30,7 +30,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 - **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
 - **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
 - **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 16, 2026**, with recent 2026 additions distributed throughout the taxonomy.
+- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 17, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
@@ -304,6 +304,9 @@ World Models
 
 - **minWM** — "minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models." *arXiv* 2605.30263 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.30263-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.30263) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/shengshu-ai/minWM)
   > Converts bidirectional T2V/TI2V video foundation models into controllable, causal, few-step autoregressive world models for low-latency interaction.
+
+- **DreamX-World 1.0** — "DreamX-World 1.0: A General-Purpose Interactive World Model." *arXiv* 2606.16993 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.16993-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.16993) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://amap-ml.github.io/DreamX_World/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/AMAP-ML/DreamX-World)
+  > General-purpose interactive world model with camera control, geometry-guided memory retrieval, promptable events, and efficient long-horizon rollouts.
 
 - **From Zero to Hero / SPAWN** — "From Zero to Hero: Training-Free Custom Concept Spawning in World Models." *arXiv* 2606.02575 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.02575-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02575)
   > Adds training-free concept spawning for autoregressive interactive world models, improving user control over unseen regions.
@@ -770,6 +773,15 @@ World Models
 - **Dream-Tac** — "Dream-Tac: A Unified Tactile World Action Model for Contact-Rich Robot Manipulation." *arXiv* 2606.08737 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.08737-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.08737) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/LYFCLOUDFAN/Dream-Tac)
   > Extends WAMs beyond vision by jointly modeling future tactile observations, future visual observations, and actions for contact-rich manipulation.
 
+- **Qwen-RobotWorld** — "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation." *arXiv* 2606.17030 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.17030-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.17030)
+  > Uses language as a unified action interface to predict future visual trajectories across manipulation, driving, navigation, and human-to-robot transfer.
+
+- **GAM** — "Geometric Action Model for Robot Policy Learning." *arXiv* 2606.17046 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.17046-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.17046) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://cvlab-kaist.github.io/Geometric-Action-Model/)
+  > Repurposes a geometric foundation model for perception, language-conditioned future latent prediction, and action decoding in robot policies.
+
+- **UMA** — "Unified Motion-Action Modeling for Heterogeneous Robot Learning." *arXiv* 2606.16917 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.16917-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.16917) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://uma-manipulation.github.io/)
+  > Treats 3D object motion and robot actions as co-evolving variables, supporting both dynamics modeling and visuomotor control from heterogeneous data.
+
 - **LingBot-VA** — "LingBot-VA: Causal Video-Action World Model for Generalist Robot Control." *arXiv* 2601.21998 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2601.21998-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.21998) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://technology.robbyant.com/lingbot-va) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Robbyant/lingbot-va)
   > Causal video-action model that unifies future prediction and robot control in a generalist policy setting.
 
@@ -1190,6 +1202,7 @@ World Models
 | **Dreamer** | ICLR 2020 | RSSM + actor-critic in imagination | Atari/Control | [![arXiv](https://img.shields.io/badge/arXiv-1912.01603-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/1912.01603) |
 | **DreamerV3** | 2023 | Discrete RSSM; universal | Multi-domain | [![arXiv](https://img.shields.io/badge/arXiv-2301.04104-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2301.04104) |
 | **DreamerV4** | arXiv 2025 | Scalable world-model training for agents | Multi-domain | [![arXiv](https://img.shields.io/badge/arXiv-2509.24527-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.24527) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://danijar.com/project/dreamer4/) |
+| **NCRL** | ICLR 2026 | World-model pretraining with rehearsal and execution guidance | Visuomotor RL | [![arXiv](https://img.shields.io/badge/arXiv-2502.19544-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.19544) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/zhaoyi11/ncrl) |
 | **TD-MPC2** | ICLR 2024 | Latent MPC, 104 tasks | Continuous | [![arXiv](https://img.shields.io/badge/arXiv-2310.16828-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.16828) |
 | **DIAMOND** | NeurIPS 2024 | Diffusion WM + RL | Atari | [![arXiv](https://img.shields.io/badge/arXiv-2405.12399-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.12399) |
 | **Think2Drive** | 2024 | BEV latent MBRL | Driving | [![arXiv](https://img.shields.io/badge/arXiv-2402.16720-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16720) |
