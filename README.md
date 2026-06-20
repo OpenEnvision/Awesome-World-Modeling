@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 20, 2026**.*
+*Latest curation pass verified against arXiv on **June 21, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -30,7 +30,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 - **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
 - **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
 - **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 20, 2026**, with recent 2026 additions distributed throughout the taxonomy.
+- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 21, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
@@ -774,6 +774,9 @@ World Models
 - **MemoryWAM** — "MemoryWAM: Efficient World Action Modeling with Persistent Memory." *arXiv* 2606.20562 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.20562-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.20562) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yangsizhe.github.io/MemoryWAM/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/yangsizhe/MemoryWAM)
   > Adds hybrid persistent memory to WAMs through recent frames, event-boundary anchors, and gist tokens for efficient long-horizon manipulation.
 
+- **ImageWAM** — "ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing?" *arXiv* 2606.19531 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.19531-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.19531) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://zhangwenyao1.github.io/ImageWAM/)
+  > Recasts WAM inference as image-editing-conditioned action prediction, using denoising cache features as a compact world-action context instead of full future video rollout.
+
 - **RealDreamer** — "RealDreamer: Real-World Robotic Manipulation Using Imagination." *arXiv* 2406.12063 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2406.12063-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12063)
 
 - **Scaling Offline Model-Based RL via Jointly-Optimized World-Action Model Pretraining** — *ICLR* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2410.00564-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.00564)
@@ -1103,6 +1106,7 @@ World Models
 | **RLA-WM** | arXiv 2026 | Residual latent action prediction in visual feature space | [![arXiv](https://img.shields.io/badge/arXiv-2605.07079-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07079) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://mlzxy.github.io/rla-wm/) |
 | **TC-WM** | arXiv 2026 | Task-centric compact latents from visual foundation features | [![arXiv](https://img.shields.io/badge/arXiv-2605.25620-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.25620) |
 | **LoopWM** | arXiv 2026 | Parameter-shared looped transformer for adaptive latent rollout depth | [![arXiv](https://img.shields.io/badge/arXiv-2606.18208-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.18208) |
+| **SMWM** | arXiv 2026 | Inverse-dynamics-regularized latent world model for action-aligned, collapse-resistant state representations | [![arXiv](https://img.shields.io/badge/arXiv-2606.20104-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.20104) |
 
 ---
 
@@ -1658,6 +1662,7 @@ World Models
 | --- | --- | --- |
 | **NVIDIA Cosmos** | World foundation model platform for Physical AI (robots + AD); open-weight under permissive license | [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVIDIA/Cosmos) [![arXiv](https://img.shields.io/badge/arXiv-2501.03575-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.03575) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://www.nvidia.com/en-us/ai/cosmos/) |
 | **NVIDIA Cosmos 3** | Open omnimodal WFM unifying reasoning, world generation, simulation, and action modeling | [![arXiv](https://img.shields.io/badge/arXiv-2606.02800-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02800) [![Report](https://img.shields.io/badge/Report-Link-4C566A?logo=readthedocs&logoColor=white)](https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVIDIA/Cosmos) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
+| **NVIDIA FlashDreams** | High-performance inference and serving library for interactive autoregressive video and world models | [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://nvidia.github.io/flashdreams/main/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVIDIA/flashdreams) |
 | **NVIDIA Cosmos-Predict2.5** | Next-gen Cosmos WFM: flow-based, unifies Text/Image/Video2World; open checkpoints | [![arXiv](https://img.shields.io/badge/arXiv-2511.00062-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.00062) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVIDIA/Cosmos) |
 | **stable-worldmodel** | Reproducible world-model research platform with data layer, baselines, planners, and OOD tasks | [![arXiv](https://img.shields.io/badge/arXiv-2605.21800-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.21800) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/galilai-group/stable-worldmodel) |
 | **minWM** | Full-stack framework for building real-time interactive video world models from open video backbones | [![arXiv](https://img.shields.io/badge/arXiv-2605.30263-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.30263) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/shengshu-ai/minWM) |
