@@ -599,6 +599,9 @@ World Models
 - **WEAVER** — "$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation." *arXiv* 2606.13672 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13672-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13672) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://arnavkj1995.github.io/WEAVER/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/arnavkj1995/WEAVER)
   > Multi-view latent robot world model built for policy evaluation, policy improvement, and test-time planning with faster long-horizon rollouts.
 
+- **WVM** — "World Value Models for Robotic Manipulation." *arXiv* 2606.24742 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.24742-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24742)
+  > Marries world-model temporal prediction with value estimation, introducing Suboptimal-Value-Bench for learning from mixed-quality manipulation trajectories.
+
 - **Primitive World Models** — "Learning Primitive Embodied World Models: Towards Scalable Robotic Learning." *arXiv* 2508.20840 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2508.20840-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.20840) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://qiaosun22.github.io/PrimitiveWorld/)
   > Decomposes embodied prediction into primitive-level world-model units for scalable robot learning.
 
@@ -687,6 +690,9 @@ World Models
 - **EfficientNWM** — "An Efficient and Multi-Modal Navigation System with One-Step World Model." *arXiv* 2601.12277 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2601.12277-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.12277) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://robotnav-bot.github.io/nav-onestepwm/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/robotnav-bot/NOW)
   > Compresses navigation prediction into a one-step multi-modal world model for faster planning.
 
+- **NavWM** — "NavWM: A Unified Navigation World Model for Foresight-Driven Planning." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.24101-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24101)
+  > Unifies latent world reasoning, multimodal trajectory forecasting, and controllable visual generation so navigation policies can plan through visual foresight.
+
 - **MUN** — "Learning World Models for Unconstrained Goal Navigation." *NeurIPS* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2411.02446-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.02446) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/RU-Automated-Reasoning-Group/MUN)
   > A clean goal-navigation formulation where the learned world model supports unconstrained goal reaching rather than one fixed task.
 
@@ -756,6 +762,9 @@ World Models
 
 - **Denoising World Model Learning** — "Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning." *arXiv* 2408.14472 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2408.14472-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.14472)
   > Uses denoising world-model learning to improve humanoid locomotion over challenging terrain.
+
+- **DynaWM** — "DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs." *IROS* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.24089-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24089)
+  > Uses a world-model regularizer and momentum targets to preserve terrain geometry and forward-dynamics awareness for smooth bipedal-wheeled stair locomotion.
 
 - **Robotic World Model** — "Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics." *arXiv* 2501.10100 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2501.10100-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.10100)
   > Learns a neural simulator for robot policy optimization, filling the sim-to-real gap with a learned dynamics model.
@@ -1153,6 +1162,9 @@ World Models
 - **DINO-World** — "Back to the Features: DINO as a Foundation for Video World Models." *arXiv* 2507.19468 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2507.19468-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.19468)
   > Shows that strong pretrained visual features can serve as the foundation for video world modeling.
 
+- **DINO-Foresight** — "DINO-Foresight: Looking into the Future with DINO." *NeurIPS* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2412.11673-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.11673) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://dino-foresight.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Sta8is/DINO-Foresight)
+  > Predicts future DINO/VFM feature trajectories for autonomous-driving scene understanding, avoiding pixel-level rollout cost while keeping downstream heads usable.
+
 - **MC-JEPA** — "MC-JEPA: A Joint-Embedding Predictive Architecture for Self-Supervised Learning of Motion and Content Features." *arXiv* 2307.12698 (2023). [![arXiv](https://img.shields.io/badge/arXiv-2307.12698-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2307.12698)
 
 - **A-JEPA** — "Audio-Visual Jointly Embedding Predictive Architecture." *arXiv* 2311.05090 (2023). [![arXiv](https://img.shields.io/badge/arXiv-2311.05090-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2311.05090)
@@ -1415,6 +1427,9 @@ World Models
 
 - **Trusted Imagination Attacks** — "Attacking the Trusted Imagination: Oracle-Level Integrity Attacks on Imagine-then-Act World Models." *arXiv* 2606.22966 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.22966-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.22966)
   > Identifies the imagined latent future in WAM-style policies as an attack surface for MPC, safety gates, and imagine-then-check verifiers.
+
+- **World Models in Pieces** — "World Models in Pieces: Structural Certification for General Agents." *ICML* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.24842-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24842)
+  > Formalizes transition-local certification for agent world models, helping identify where long-horizon planning is structurally reliable rather than relying on worst-case guarantees.
 
 - **World Models: The Safety Perspective** — *ISSREW* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2411.07690-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.07690)
   > Position/survey: how to make world models safer across embodied AI and autonomous driving.
