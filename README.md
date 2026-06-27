@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 26, 2026**.*
+*Latest curation pass verified against arXiv on **June 28, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -30,7 +30,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 - **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
 - **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
 - **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 26, 2026**, with recent 2026 additions distributed throughout the taxonomy.
+- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 28, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
@@ -789,6 +789,12 @@ World Models
 - **ICWM** — "In-Context World Modeling for Robotic Control." *arXiv* 2606.26025 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26025-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26025)
   > Treats robot system identification as in-context world modeling, letting VLA policies infer camera and embodiment dynamics from short self-generated interaction histories.
 
+- **REGEN** — "World Action Models Enable Continual Imitation Learning with Recurrent Generative Replays." *arXiv* 2606.27374 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27374-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27374)
+  > Uses WAM-generated pseudo-replay trajectories to reduce catastrophic forgetting during continual imitation learning without storing old demonstrations.
+
+- **DexAC-WM** — "Not All Actions Are Equal: Rethinking Conditioning for Dexterous World Model." *arXiv* 2606.27325 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27325-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27325)
+  > Adds dimension-aware action tokenization and semantic grounding for high-DoF dexterous world models, improving action fidelity beyond global action-sequence compression.
+
 - **MemoryWAM** — "MemoryWAM: Efficient World Action Modeling with Persistent Memory." *arXiv* 2606.20562 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.20562-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.20562) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yangsizhe.github.io/MemoryWAM/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/yangsizhe/MemoryWAM)
   > Adds hybrid persistent memory to WAMs through recent frames, event-boundary anchors, and gist tokens for efficient long-horizon manipulation.
 
@@ -1012,12 +1018,21 @@ World Models
 - **MeGAS** — "MeGAS: Thermomechanical Dynamic Gaussian Splatting for Thermophysical Scene Editing." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.23455-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23455) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](http://zju3dv.github.io/MeGAS)
   > Adds temperature-aware MPM dynamics and thermomechanical phase changes to dynamic Gaussian splatting, strengthening the physics side of editable visual world models.
 
+- **PhysiFormer** — "PhysiFormer: Learning to Simulate Mechanics in World Space." *arXiv* 2606.27364 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27364-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27364) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yimingc9.github.io/physiformer)
+  > Diffusion-transformer mechanics simulator that predicts probabilistic future 3D mesh trajectories directly in world coordinates for rigid and elastic objects.
+
+- **LithoDreamer** — "LithoDreamer: A Physics-Informed World Model for Multi-Stage Computational Lithography." *arXiv* 2606.26713 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26713-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26713) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/7jiangyq/lithodreamer.git)
+  > Models lithography as a multi-stage physical state-evolution process, pairing forward prediction with intervention optimization for inverse planning.
+
 #### 1.5.2 Climate & Earth System World Models
 
 - **Pangu-Weather** — Bi, K. et al. "Accurate medium-range global weather forecasting with 3D neural networks." *Nature* (2023). [![Paper](https://img.shields.io/badge/Paper-Link-4C566A?logo=readthedocs&logoColor=white)](https://www.nature.com/articles/s41586-023-06185-3)
   > 3D Earth Transformer for medium-range weather forecasting; faster and more accurate than traditional NWP.
 
 - **GraphCast** — Lam, R. et al. "Learning skillful medium-range global weather forecasting." *Science* (2023). [![Paper](https://img.shields.io/badge/Paper-Link-4C566A?logo=readthedocs&logoColor=white)](https://www.science.org/doi/10.1126/science.adi2336)
+
+- **EO-WM** — "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting." *arXiv* 2606.27277 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27277-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27277) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Luo-Z13/EO-WM)
+  > Frames multispectral Earth-observation forecasting as weather-conditioned probabilistic world modeling with explicit physical-stress diagnostics.
 
 #### 1.5.3 Molecular & Biological World Models
 
@@ -1159,11 +1174,17 @@ World Models
 - **LeWorldModel / LeWM** — "LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels." *arXiv* 2603.19312 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.19312-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.19312) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://le-wm.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/lucas-maes/le-wm)
   > Stable end-to-end JEPA world model from raw pixels with action-conditioned latent prediction, fast planning, and compact single-GPU training.
 
+- **Fast LeWorldModel** — "Fast LeWorldModel." *arXiv* 2606.26217 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26217-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26217)
+  > Replaces autoregressive one-step LeWM rollouts with parallel action-prefix latent prediction, reducing planning latency and long-horizon error accumulation.
+
 - **SkyJEPA** — "SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors." *arXiv* 2606.23444 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.23444-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23444)
   > JEPA-style latent dynamics model for real-time quadrotor control, pairing physically interpretable probing with sampling-based optimal control for zero-shot sim-to-real transfer.
 
 - **LeJEPA Theory** — Klindt, D., LeCun, Y. & Balestriero, R. "When Does LeJEPA Learn a World Model?" *arXiv* 2605.26379 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.26379-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.26379)
   > Provides identifiability conditions under which JEPA-style embeddings recover latent world variables useful for planning.
+
+- **JEPA Generalization Theory** — "A Generalization Theory for JEPA-Based World Models." *arXiv* 2606.27014 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27014-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27014)
+  > Connects JEPA pretraining error to downstream planning regret through a finite-sample generalization analysis of action-conditioned latent prediction.
 
 - **V-JEPA Learns Intuitive Physics** — "Intuitive physics understanding emerges from self-supervised pretraining on natural videos." *arXiv* 2502.11831 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2502.11831-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.11831) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/facebookresearch/jepa-intuitive-physics)
   > Evidence that JEPA-style video pretraining can induce physical prediction useful for world modeling.
@@ -1628,6 +1649,7 @@ World Models
 | **WorldSimBench** | Video world models | Video generation as world simulation | [![arXiv](https://img.shields.io/badge/arXiv-2410.18072-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.18072) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://iranqin.github.io/WorldSimBench.github.io/) |
 | **WorldOlympiad** | Video world models | Physical faithfulness, 3D consistency, interaction fidelity | [![arXiv](https://img.shields.io/badge/arXiv-2606.11129-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.11129) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://alibaba-damo-academy.github.io/WorldOlympiad/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/alibaba-damo-academy/WorldOlympiad) |
 | **Tailor-Bench** | Visual world models | Long-tail physical interaction generalization | [![arXiv](https://img.shields.io/badge/arXiv-2606.24256-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24256) |
+| **MMBench2** | Visual world models | Hallucination modes, coverage diagnostics, and targeted adaptation | [![arXiv](https://img.shields.io/badge/arXiv-2606.27326-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27326) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://www.nicklashansen.com/mmbench2) |
 | **Physics-IQ Verified** | Physics / video WMs | Audited physical-understanding evaluation for video generation models | [![arXiv](https://img.shields.io/badge/arXiv-2606.18943-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.18943) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/google-deepmind/physics-iq-benchmark) |
 | **WorldScore** | General generation | Unified evaluation of next-scene world generation | [![arXiv](https://img.shields.io/badge/arXiv-2504.00983-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.00983) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://haoyi-duan.github.io/WorldScore/) |
 | **EWMBench** | Embodied video generation | Scene, motion, and semantic quality | [![arXiv](https://img.shields.io/badge/arXiv-2505.09694-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09694) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/AgibotTech/EWMBench) |
@@ -1767,6 +1789,7 @@ World Models
 | --- | --- | --- |
 | **WorldArena_Robotwin2.0** | Official dataset behind WorldArena embodied evaluation | [![HuggingFace](https://img.shields.io/badge/🤗-Dataset-FFD21E)](https://huggingface.co/datasets/WorldArena/WorldArena_Robotwin2.0) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/tsinghua-fib-lab/WorldArena) |
 | **EgoCS-400K** | Replay-grounded egocentric Counter-Strike trajectories with video, actions, states, events, and language | [![arXiv](https://img.shields.io/badge/arXiv-2606.18180-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.18180) |
+| **PhysEditWorld** | UE5 replay dataset for physics-editable world models with gravity interventions, actions, states, and multimodal rollouts | [![arXiv](https://img.shields.io/badge/arXiv-2606.26694-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26694) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yizhiqianbi.github.io/physeditworld/) |
 | **MobileWorld** | Large-scale semantic world-model dataset for mobile GUI agents | [![arXiv](https://img.shields.io/badge/arXiv-2512.14014-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.14014) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/jacklishufan/MobileWorld) |
 | **MotionScape** | Highly dynamic UAV-view dataset for world models | [![arXiv](https://img.shields.io/badge/arXiv-2604.07991-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.07991) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Thelegendzz/MotionScape) |
 | **OmniWorld** | Multi-domain, multi-modal 4D world modeling dataset and benchmark | [![arXiv](https://img.shields.io/badge/arXiv-2509.12201-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.12201) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yangzhou24.github.io/OmniWorld/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/yangzhou24/OmniWorld) [![HuggingFace](https://img.shields.io/badge/🤗-Dataset-FFD21E)](https://huggingface.co/datasets/InternRobotics/OmniWorld) |
