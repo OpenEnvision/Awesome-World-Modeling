@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 28, 2026**.*
+*Latest curation pass verified against arXiv on **July 2, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -30,7 +30,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 - **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
 - **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
 - **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 28, 2026**, with recent 2026 additions distributed throughout the taxonomy.
+- **Maintained for recency.** The latest curation pass was checked against arXiv on **July 2, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
@@ -578,6 +578,9 @@ World Models
 - **IOI** — "IOI: Decoupling Kinematics and Physics for Interactive World Models." *arXiv* 2606.23296 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.23296-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23296)
   > Hybrid interactive robot world model that injects analytical kinematic priors into video generation, improving control alignment, OOD generalization, policy evaluation, and real-world data synthesis.
 
+- **DexAC-WM** — "Not All Actions Are Equal: Rethinking Conditioning for Dexterous World Model." *arXiv* 2606.27325 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27325-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27325)
+  > Reworks high-DoF dexterous action conditioning with dimension-aware action tokens and semantic grounding, improving action-fidelity in manipulation world-model rollouts.
+
 - **WoW** — "WoW: Towards a World omniscient World model Through Embodied Interaction." *arXiv* 2509.22642 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2509.22642-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22642) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://wow-world-model.github.io) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/wow-world-model/wow-world-model)
   > Large embodied-interaction world model that targets broad scene and object dynamics through active interaction.
 
@@ -776,6 +779,15 @@ World Models
 
 - **V-JEPA 2** — Assran, M. et al. "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning." *arXiv* 2506.09985 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2506.09985-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.09985) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://ai.meta.com/research/vjepa/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/facebookresearch/vjepa2)
   > **Meta's flagship world model.** Pretrained on >1M hours of internet video, then fine-tuned on <62h of robot trajectories for zero-shot manipulation on real Franka arms — no task-specific rewards.
+
+- **REGEN** — "World Action Models Enable Continual Imitation Learning with Recurrent Generative Replays." *arXiv* 2606.27374 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27374-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27374)
+  > Uses WAM-generated pseudo-replay trajectories for continual imitation learning, reducing catastrophic forgetting without storing old demonstrations.
+
+- **Tactile-WAM** — "Tactile-WAM: Touch-Aware World Action Model with Tactile Asymmetric Attention." *arXiv* 2606.26663 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26663-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26663)
+  > Adds tactile prediction and asymmetric tactile attention so contact-rich manipulation policies can use touch without degrading visual-action dynamics.
+
+- **ICWM** — "In-Context World Modeling for Robotic Control." *arXiv* 2606.26025 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26025-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26025)
+  > Treats robot system identification as in-context world modeling, adapting policies to new camera viewpoints and morphologies without parameter updates.
 
 - **WLA** — "World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis." *arXiv* 2606.05979 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.05979-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.05979)
   > Defines world-language-action models that jointly predict textual subtasks, subgoal images, and robot actions, bridging WAM-style dynamics and VLA-style language reasoning.
@@ -1180,6 +1192,9 @@ World Models
 - **SkyJEPA** — "SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors." *arXiv* 2606.23444 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.23444-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23444)
   > JEPA-style latent dynamics model for real-time quadrotor control, pairing physically interpretable probing with sampling-based optimal control for zero-shot sim-to-real transfer.
 
+- **Fast-LeWM** — "Fast LeWorldModel." *arXiv* 2606.26217 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26217-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26217)
+  > Speeds JEPA-style latent planning by predicting action-prefix futures in parallel instead of recursively rolling out one-step latent transitions.
+
 - **LeJEPA Theory** — Klindt, D., LeCun, Y. & Balestriero, R. "When Does LeJEPA Learn a World Model?" *arXiv* 2605.26379 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.26379-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.26379)
   > Provides identifiability conditions under which JEPA-style embeddings recover latent world variables useful for planning.
 
@@ -1384,6 +1399,9 @@ World Models
 - **WorldEval** — "WorldEval: World Model as Real-World Robot Policies Evaluator." *arXiv* 2505.19017 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2505.19017-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19017) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://worldeval.github.io)
   > Evaluates real-robot policies through a learned world model rather than only offline prediction metrics.
 
+- **WoVR** — "WoVR: World Models as Reliable Simulators for Post-Training VLA Policies with RL." *arXiv* 2602.13977 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2602.13977-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.13977) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/RLinf/RLinf)
+  > Regulates how RL uses imperfect imagined rollouts, combining controllable video simulation, keyframe-initialized rollouts, and policy-simulator co-evolution.
+
 - **GE-Sim 2.0** — "GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation." *arXiv* 2605.27491 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.27491-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.27491) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://ge-sim-v2.github.io/)
   > Upgrades action-conditioned robot video simulation with proprioceptive state decoding, rollout scoring, and fast policy-in-the-loop evaluation.
 
@@ -1461,6 +1479,9 @@ World Models
 - **World Models in Pieces** — "World Models in Pieces: Structural Certification for General Agents." *ICML* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.24842-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24842)
   > Formalizes transition-local certification for agent world models, helping identify where long-horizon planning is structurally reliable rather than relying on worst-case guarantees.
 
+- **Hallucination in World Models** — "Hallucination in World Models is Predictable and Preventable." *arXiv* 2606.27326 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27326-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27326)
+  > Shows hallucination concentrates in low-coverage state-action regions, introduces MMBench2, and uses coverage-aware data collection to mitigate rollout drift.
+
 - **World Models: The Safety Perspective** — *ISSREW* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2411.07690-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.07690)
   > Position/survey: how to make world models safer across embodied AI and autonomous driving.
 
@@ -1530,6 +1551,9 @@ World Models
 
 - **CoMAP** — "COMAP: Co-Evolving World Models and Agent Policies for LLM Agents." *arXiv* 2606.02372 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.02372-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02372) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/loyiv/CoMAP)
   > Co-trains textual world models and LLM-agent policies so environment dynamics stay aligned with the agent's evolving state-action distribution.
+
+- **Qwen-AgentWorld** — "Qwen-AgentWorld: Language World Models for General Agents." *arXiv* 2606.24597 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.24597-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24597) [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://qwen.ai/blog?id=qwen-agentworld) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/QwenLM/Qwen-AgentWorld)
+  > Qwen's language world model family for simulating agentic environments, with AgentWorldBench and multi-domain trajectory data for agent training.
 
 - **Astra** — "Thinking with Imagination: Agentic Visual Spatial Reasoning with World Simulators." *arXiv* 2606.06476 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.06476-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.06476) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://zcmax.github.io/projects/Thinking-With-Imagination)
   > Lets a VLM actively invoke a world simulator for imagined novel-view evidence during spatial reasoning.
@@ -1616,6 +1640,7 @@ World Models
 | **Mechanistic View on Video Generation as WMs** | arXiv 2026 | State-and-dynamics lens on video world models | [![arXiv](https://img.shields.io/badge/arXiv-2601.17067-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.17067) |
 | **Latent State Design for World Models** | arXiv 2026 | Sufficiency constraints for actionable latent states | [![arXiv](https://img.shields.io/badge/arXiv-2605.01694-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.01694) |
 | **Physically Viable World Models** | arXiv 2026 | Query-conditioned physical abstraction and verification | [![arXiv](https://img.shields.io/badge/arXiv-2605.30542-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.30542) |
+| **Generalization Theory for JEPA-Based WMs** | arXiv 2026 | Finite-sample bounds linking JEPA pretraining error to planning regret | [![arXiv](https://img.shields.io/badge/arXiv-2606.27014-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27014) |
 | **General Agents Contain World Models** | arXiv 2025 | Agentic world-model emergence and formalization | [![arXiv](https://img.shields.io/badge/arXiv-2506.01622-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.01622) |
 | **When Do Neural Networks Learn World Models?** | arXiv 2025 | Conditions for world-model learning in neural networks | [![arXiv](https://img.shields.io/badge/arXiv-2502.09297-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.09297) |
 | **Reconstruction or Semantics?** | arXiv 2026 | Latent-space utility for robotic world models | [![arXiv](https://img.shields.io/badge/arXiv-2605.06388-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.06388) |
