@@ -6,12 +6,12 @@
 [![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Models?style=social)](https://github.com/OpenEnvision/Awesome-World-Models/stargazers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/OpenEnvision/Awesome-World-Models/pulls)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://github.com/OpenEnvision/Awesome-World-Models/blob/main/LICENSE)
-[![Last Updated](https://img.shields.io/badge/Updated-June%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Models/commits/main/README.md)
+[![Last Updated](https://img.shields.io/badge/Updated-July%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Models/commits/main/README.md)
 
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **June 28, 2026**.*
+*Latest curation pass verified against arXiv on **July 4, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -30,7 +30,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 - **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
 - **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
 - **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **June 28, 2026**, with recent 2026 additions distributed throughout the taxonomy.
+- **Maintained for recency.** The latest curation pass was checked against arXiv on **July 4, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
@@ -451,6 +451,9 @@ World Models
 - **OccSim** — "OccSim: Multi-kilometer Simulation with Long-horizon Occupancy World Models." *arXiv* 2603.28887 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.28887-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.28887)
   > Pushes occupancy world models from clip-scale prediction toward open-ended, map-free, multi-kilometer traffic simulation.
 
+- **OWMDrive** — "OWMDrive: Causality-Aware End-to-End Autonomous Driving via 4D Occupancy World Model." *IROS* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.30421-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.30421)
+  > Uses multi-step 3D occupancy forecasting as a conditional prior for diffusion-based trajectory planning under occlusion and interaction uncertainty.
+
 - **EOT-WM** — "Other Vehicle Trajectories Are Also Needed: A Driving World Model Unifies Ego-Other Vehicle Trajectories in Video Latent Space." *arXiv* 2503.09215 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2503.09215-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.09215)
 
 - **Semi-Supervised Occupancy WM** — "Semi-Supervised Vision-Centric 3D Occupancy World Model for Autonomous Driving." *arXiv* 2502.07309 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2502.07309-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.07309) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/getterupper/PreWorld)
@@ -522,6 +525,12 @@ World Models
 
 - **Drive-JEPA** — "Drive-JEPA: Video JEPA Meets Multimodal Trajectory Distillation for End-to-End Driving." *arXiv* 2601.22032 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2601.22032-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.22032)
   > Adapts V-JEPA pretraining to the driving domain; achieves SoTA on NAVSIM v1/v2 with a single front-view camera by learning planning-aligned predictive representations.
+
+- **LWDrive** — "LWDrive: Layer-Wise World-Model-Guided Vision-Language Model Planning for Autonomous Driving." *arXiv* 2606.29879 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.29879-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.29879)
+  > Injects future-frame supervision into a VLM and refines coarse trajectories with layer-wise world-model features on NAVSIM.
+
+- **ForgeDrive** — "ForgeDrive: Bidirectional Cross-Conditioning for Unified Visual-Action Generation in Autonomous Driving." *arXiv* 2606.31226 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.31226-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31226)
+  > Factorizes future driving as paired frame-action steps, letting action generation and future visual imagination condition each other.
 
 - **WorldDreamer** — "WorldDreamer: Towards General World Models for Video Generation via Predicting Masked Tokens." *arXiv* 2401.09985 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2401.09985-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.09985) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://world-dreamer.github.io/)
   > Frames world modeling as unsupervised visual sequence modeling; maps visual inputs to discrete tokens and predicts masked ones with multi-modal prompts.
@@ -601,6 +610,18 @@ World Models
 
 - **WVM** — "World Value Models for Robotic Manipulation." *arXiv* 2606.24742 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.24742-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24742)
   > Marries world-model temporal prediction with value estimation, introducing Suboptimal-Value-Bench for learning from mixed-quality manipulation trajectories.
+
+- **A2World** — "Learning Transferable Dynamics Priors from Action to World Modeling." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.29501-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.29501)
+  > Pretrains multi-view, action-conditioned diffusion dynamics once, then adapts it into both real-world simulators and video-action policy models.
+
+- **DVG-WM** — "DVG-WM: Disentangled Video Generation Enables Efficient Embodied World Model for Robotic Manipulation." *arXiv* 2606.32028 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.32028-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.32028)
+  > Separates low-level dynamics preview from high-fidelity visual synthesis, improving manipulation rollout efficiency and contact detail.
+
+- **3DPWM** — "3D Point World Models: Point Completion Enables More Accurate Dynamics Learning." *arXiv* 2607.00148 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.00148-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00148)
+  > Completes partial point clouds before action-conditioned 3D dynamics learning, enabling 100-300+ step rollouts and sim-to-real transfer.
+
+- **PhysMani** — "PhysMani: Physics-principled 3D World Model for Dynamic Object Manipulation." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2607.01938-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.01938) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/vLAR-group/PhysMani)
+  > Couples a divergence-free 3D Gaussian velocity-field world model with a future-aware policy for dynamic-object manipulation.
 
 - **Primitive World Models** — "Learning Primitive Embodied World Models: Towards Scalable Robotic Learning." *arXiv* 2508.20840 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2508.20840-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.20840) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://qiaosun22.github.io/PrimitiveWorld/)
   > Decomposes embodied prediction into primitive-level world-model units for scalable robot learning.
@@ -692,6 +713,15 @@ World Models
 
 - **NavWM** — "NavWM: A Unified Navigation World Model for Foresight-Driven Planning." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.24101-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.24101)
   > Unifies latent world reasoning, multimodal trajectory forecasting, and controllable visual generation so navigation policies can plan through visual foresight.
+
+- **SWAM** — "Pondering the Way: Spatial-perceiving World Action Model for Embodied Navigation." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.29908-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.29908)
+  > Jointly generates intermediate RGB-D observations and actions in one pass, reducing candidate-search dependence in visual navigation.
+
+- **FutureNav** — "FutureNav: Unified World-Action Modeling for Vision-and-Language Navigation." *arXiv* 2606.30367 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.30367-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.30367)
+  > Optimizes action prediction, inverse/forward dynamics, and future spatial-state generation inside a unified VLN architecture.
+
+- **MuSix** — "Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2607.00457-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00457)
+  > Uses scale-aware world-model routing and scale-dependent forgetting so embodied agents can adapt across fast-changing and persistent environment structure.
 
 - **MUN** — "Learning World Models for Unconstrained Goal Navigation." *NeurIPS* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2411.02446-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.02446) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/RU-Automated-Reasoning-Group/MUN)
   > A clean goal-navigation formulation where the learned world model supports unconstrained goal reaching rather than one fixed task.
@@ -794,6 +824,18 @@ World Models
 
 - **DexAC-WM** — "Not All Actions Are Equal: Rethinking Conditioning for Dexterous World Model." *arXiv* 2606.27325 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.27325-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.27325)
   > Adds dimension-aware action tokenization and semantic grounding for high-DoF dexterous world models, improving action fidelity beyond global action-sequence compression.
+
+- **ABot-M0.5** — "ABot-M0.5: Unified Mobility-and-Manipulation World Action Model." *arXiv* 2607.00678 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.00678-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00678) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/amap-cvlab/ABot-Manipulation)
+  > Aligns temporal granularity, base/arm action spaces, and dream-forcing train-test consistency for long-horizon mobile manipulation.
+
+- **Synthetic-Prior WAM Transfer** — "Efficient Sim-to-Real Transfer of World-Action Models from Synthetic Priors." *CVPRW* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.31101-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31101)
+  > Studies zero-shot real-robot deployment of a world-action model trained from synthetic demonstrations and Cosmos Policy priors.
+
+- **Bridge-WA** — "Bridge-WA: Predicting Where and How the World Changes for Robotic Action." *arXiv* 2607.02195 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.02195-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.02195) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://hcplab-sysu.github.io/BRIDGE-WA)
+  > Distills future tokens, change maps, and motion-flow priors into an action transformer without deployment-time dense future-image generation.
+
+- **VT-WAM** — "VT-WAM: Visual-Tactile World Action Model for Contact-Rich Manipulation." *arXiv* 2607.02503 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.02503-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.02503) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://vt-wam.github.io/)
+  > Jointly models future visual, tactile, and action streams so contact-phase policies can react to deformation, pressure, slip, and friction.
 
 - **MemoryWAM** — "MemoryWAM: Efficient World Action Modeling with Persistent Memory." *arXiv* 2606.20562 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.20562-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.20562) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yangsizhe.github.io/MemoryWAM/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/yangsizhe/MemoryWAM)
   > Adds hybrid persistent memory to WAMs through recent frames, event-boundary anchors, and gist tokens for efficient long-horizon manipulation.
@@ -962,6 +1004,9 @@ World Models
 - **FR3D** — "Future Dynamic 3D Reconstruction: A 3D World Model with Disentangled Ego-Motion." *arXiv* 2606.18250 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.18250-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.18250)
   > Predicts persistent 3D latent scene evolution while disentangling ego-motion from dynamic world motion for longer-horizon consistency.
 
+- **OVOW** — "One Video, One World: Turning Monocular Video into Physical 4D Scenes." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.31388-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31388) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://OneVideoOneWorld.github.io/)
+  > Converts monocular video into instance-level, simulation-ready 4D mesh scenes with physics-grounded assembly and evaluation.
+
 - **MoVerse** — "MoVerse: Real-Time Video World Modeling with Panoramic Gaussian Scaffold." *arXiv* 2606.13376 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.13376-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.13376) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://orange-3dv-team.github.io/MoVerse/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Orange-3DV-Team/MoVerse)
   > Builds a navigable 3D world from one narrow-FOV image via panoramic Gaussian scaffolding and real-time video rendering.
 
@@ -1059,6 +1104,9 @@ World Models
 
 - **PAN** — "PAN: A World Model for General, Interactable, and Long-Horizon World Simulation." *arXiv* 2511.09057 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2511.09057-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.09057) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://panworld.ai/)
   > General interactive world simulation backbone emphasizing long-horizon controllability.
+
+- **WorldDirector** — "WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory." *arXiv* 2607.02517 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.02517-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.02517) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://worlddirector.github.io/)
+  > Decouples semantic motion orchestration from rendering, preserving dynamic object identity across long occlusions and unrestricted viewpoint changes.
 
 - **Cosmos 3** — "Cosmos 3: Omnimodal World Models for Physical AI." *arXiv* 2606.02800 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.02800-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02800) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVIDIA/Cosmos)
   > NVIDIA's omnimodal Physical AI backbone unifying language, image, video, audio, and action generation/understanding in one world-model family.
@@ -1177,6 +1225,12 @@ World Models
 - **Fast LeWorldModel** — "Fast LeWorldModel." *arXiv* 2606.26217 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.26217-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.26217)
   > Replaces autoregressive one-step LeWM rollouts with parallel action-prefix latent prediction, reducing planning latency and long-horizon error accumulation.
 
+- **Delta-JEPA** — "Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding." *arXiv* 2606.31232 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.31232-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31232)
+  > Adds latent-displacement action decoding so reconstruction-free JEPA world models remain action-sensitive for planning.
+
+- **AdaJEPA** — "AdaJEPA: An Adaptive Latent World Model." *arXiv* 2606.32026 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.32026-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.32026)
+  > Performs self-supervised test-time adaptation inside MPC, recalibrating latent predictions after each observed transition.
+
 - **SkyJEPA** — "SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors." *arXiv* 2606.23444 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.23444-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23444)
   > JEPA-style latent dynamics model for real-time quadrotor control, pairing physically interpretable probing with sampling-based optimal control for zero-shot sim-to-real transfer.
 
@@ -1252,6 +1306,9 @@ World Models
 - **Mirage / Latent Spatial Memory** — "Latent Spatial Memory for Video World Models." *arXiv* 2606.09828 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.09828-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09828) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://microsoft.github.io/LatentSpatialMemory/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/microsoft/LatentSpatialMemory)
   > Stores persistent 3D scene context directly in diffusion latent space, reducing RGB render-and-reencode overhead.
 
+- **MemLearner** — "MemLearner: Learning to Query Context memory for Video World Models." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.31734-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31734) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yujiwen.github.io/memlearner/)
+  > Learns adaptive context querying for long-video world models, improving scene consistency under occlusion and dynamic objects.
+
 - **CLAW** — "CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization." *arXiv* 2606.04130 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.04130-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.04130)
   > Learns continuous latent actions from action-free videos, broadening latent-action world modeling beyond labeled robotics and games.
 
@@ -1268,6 +1325,9 @@ World Models
 
 - **PoE-World** — "PoE-World: Compositional World Modeling with Products of Programmatic Experts." *arXiv* 2505.10819 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2505.10819-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.10819) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://topwasu.github.io/poe-world)
   > A representative programmatic/symbolic world-modeling direction focused on compositional structure rather than pixels.
+
+- **OPINE-World** — "OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration." *arXiv* 2607.01531 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.01531-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.01531)
+  > Synthesizes object-centric world models as code from interaction, using replay verification and ontology-error-driven exploration.
 
 - **Generating Symbolic World Models via Test-time Scaling of Large Language Models** — *arXiv* 2502.04728 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2502.04728-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.04728) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://vmlpddl.github.io/)
 
@@ -1298,6 +1358,7 @@ World Models
 | **DreamerV3** | 2023 | Discrete RSSM; universal | Multi-domain | [![arXiv](https://img.shields.io/badge/arXiv-2301.04104-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2301.04104) |
 | **DreamerV4** | arXiv 2025 | Scalable world-model training for agents | Multi-domain | [![arXiv](https://img.shields.io/badge/arXiv-2509.24527-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.24527) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://danijar.com/project/dreamer4/) |
 | **NCRL** | ICLR 2026 | World-model pretraining with rehearsal and execution guidance | Visuomotor RL | [![arXiv](https://img.shields.io/badge/arXiv-2502.19544-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.19544) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/zhaoyi11/ncrl) |
+| **WorldSample** | arXiv 2026 | Real-synthetic loop with post-trained world-model transitions for data-efficient RL | Real-robot manipulation | [![arXiv](https://img.shields.io/badge/arXiv-2607.02431-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.02431) |
 | **TD-MPC2** | ICLR 2024 | Latent MPC, 104 tasks | Continuous | [![arXiv](https://img.shields.io/badge/arXiv-2310.16828-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.16828) |
 | **DIAMOND** | NeurIPS 2024 | Diffusion WM + RL | Atari | [![arXiv](https://img.shields.io/badge/arXiv-2405.12399-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.12399) |
 | **Think2Drive** | 2024 | BEV latent MBRL | Driving | [![arXiv](https://img.shields.io/badge/arXiv-2402.16720-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16720) |
@@ -1320,6 +1381,12 @@ World Models
 
 - **AdaReP** — "AdaReP: Adaptive Re-Planning under Model Mismatch for Neural World-Model Predictive Control." *arXiv* 2606.23079 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.23079-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23079)
   > Training-free MPC wrapper that adapts replanning tolerance from rollout mismatch and local dynamics sensitivity, reducing planner queries while preserving real-robot task performance.
+
+- **ACID** — "ACID: Action Consistency via Inverse Dynamics for Planning with World Models." *arXiv* 2607.02403 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.02403-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.02403) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://gawon1224.github.io/ACID/)
+  > Adds cycle action-consistency costs from inverse dynamics so planned imagined transitions remain executable.
+
+- **Path Planning in Physically Viable World Models** — *arXiv* 2607.00673 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.00673-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00673)
+  > Uses physics-modified 3D Gaussian scenes to answer what-if route-feasibility queries before robots commit to stale outdoor maps.
 
 - **Dream to Drive** — "Dream to Drive: Model-Based Vehicle Control Using Analytic World Models." *arXiv* 2502.10012 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2502.10012-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.10012)
 
@@ -1383,6 +1450,12 @@ World Models
 
 - **WorldEval** — "WorldEval: World Model as Real-World Robot Policies Evaluator." *arXiv* 2505.19017 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2505.19017-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19017) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://worldeval.github.io)
   > Evaluates real-robot policies through a learned world model rather than only offline prediction metrics.
+
+- **RoboWorld** — "RoboWorld: Fast and Reliable Neural Simulators for Generalist Robot Policy Evaluation." *ICMLW* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2607.01060-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.01060)
+  > Pairs fast autoregressive world-model rollouts with task-progress VLM scoring, reporting strong correlation with real-robot evaluation.
+
+- **RosettaSim** — "Long-term Traffic Simulation via Structured Autoregressive Modeling." *ECCV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2606.31209-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31209)
+  > Converts scene topology, agent states, and spawning intents into structured autoregressive streams for stable long-horizon traffic simulation.
 
 - **GE-Sim 2.0** — "GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation." *arXiv* 2605.27491 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.27491-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.27491) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://ge-sim-v2.github.io/)
   > Upgrades action-conditioned robot video simulation with proprioceptive state decoding, rollout scoring, and fast policy-in-the-loop evaluation.
@@ -1504,6 +1577,9 @@ World Models
 - **AAWM** — "Beyond Next-Observation Prediction: Agent-Authored World Modeling for Sequential Decision Making." *arXiv* 2606.25421 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.25421-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.25421)
   > Trains language-agent world models on decision-relevant dynamics authored from the policy's own information needs rather than raw next-observation reconstruction.
 
+- **WorldEvolver** — "Self-Evolving World Models for LLM Agent Planning." *arXiv* 2606.30639 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.30639-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.30639)
+  > Revises episodic and semantic memory at test time, filtering unreliable foresight before it enters downstream LLM-agent planning.
+
 - **MobileDreamer** — "MobileDreamer: Generative Sketch World Model for GUI Agent." *arXiv* 2601.04035 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2601.04035-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.04035)
   > Introduces a lightweight sketch-based GUI world model for long-horizon mobile agent planning, trading raw-pixel fidelity for controllable structure.
 
@@ -1587,6 +1663,7 @@ World Models
 | **World Model for Robot Learning** | arXiv 2026 | Robot-learning taxonomy, applications, benchmarks | [![arXiv](https://img.shields.io/badge/arXiv-2605.00080-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.00080) |
 | **World Models for Robotic Manipulation** | arXiv 2026 | Manipulation representations, action coupling, pipeline roles | [![arXiv](https://img.shields.io/badge/arXiv-2606.00113-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.00113) |
 | **World Action Models: The Next Frontier** | arXiv 2026 | WAM definition, taxonomy, data and evaluation protocols | [![arXiv](https://img.shields.io/badge/arXiv-2605.12090-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.12090) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://openmoss.github.io/Awesome-WAM) |
+| **From World Models to World Action Models** | arXiv 2026 | Concise robotics tutorial and WAM design-space taxonomy | [![arXiv](https://img.shields.io/badge/arXiv-2607.00836-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00836) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://clearlab-sustech.github.io/WorldModelSurvey/) |
 | **Robots Need More than VLA and World Models** | arXiv 2026 | Position paper on memory, verification, causality, and interactive grounding beyond policy scaling | [![arXiv](https://img.shields.io/badge/arXiv-2606.06556-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.06556) |
 | **Embodied World Models: Physical Simulation** | arXiv 2025 | Physical simulators + world models | [![arXiv](https://img.shields.io/badge/arXiv-2507.00917-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.00917) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NJU3DV-LoongGroup/Embodied-World-Models-Survey) |
 | **Embodied AI Agents: Modeling the World** | arXiv 2025 | Agent-centric perspective | [![arXiv](https://img.shields.io/badge/arXiv-2506.22355-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.22355) |
@@ -1656,6 +1733,8 @@ World Models
 | **WorldArena** | Embodied | Perception and functional utility under embodiment | [![arXiv](https://img.shields.io/badge/arXiv-2602.08971-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.08971) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://world-arena.ai) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/tsinghua-fib-lab/WorldArena) |
 | **MIND** | Interactive video | Memory consistency and action control | [![arXiv](https://img.shields.io/badge/arXiv-2602.08025-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.08025) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/CSU-JPG/MIND) |
 | **MBench** | Video world models | Long-horizon memory capability and internal state stability | [![arXiv](https://img.shields.io/badge/arXiv-2606.00793-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.00793) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://peanutup.github.io/MBench-project/) |
+| **WorldOdysseyBench** | Interactive world models | Long-horizon action, vision, physics, and memory stability | [![arXiv](https://img.shields.io/badge/arXiv-2606.31672-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31672) |
+| **ScratchWorld** | Executable symbolic worlds | Next-state, causal trace, counterfactual, and hidden-state diagnostics | [![arXiv](https://img.shields.io/badge/arXiv-2606.31689-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31689) |
 | **ARB4WM** | Continuous control | Adversarial robustness of world-model agents under visual perturbations | [![arXiv](https://img.shields.io/badge/arXiv-2606.16605-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.16605) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/zaoanguai/ARB4WM) |
 | **WRBench** | Video world models | Persistent state evolution under viewpoint intervention | [![arXiv](https://img.shields.io/badge/arXiv-2606.20545-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.20545) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://jinplu.github.io/WRBench/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/JinPLu/WRBench) |
 | **Omni-WorldBench** | Interactive video | Interaction-centric comprehensive evaluation | [![arXiv](https://img.shields.io/badge/arXiv-2603.22212-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.22212) |
