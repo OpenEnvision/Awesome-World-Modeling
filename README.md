@@ -11,7 +11,7 @@
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass verified against arXiv on **July 4, 2026**.*
+*Latest curation pass verified against arXiv on **July 5, 2026**.*
 
 *Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
 
@@ -30,7 +30,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 - **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
 - **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
 - **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **July 4, 2026**, with recent 2026 additions distributed throughout the taxonomy.
+- **Maintained for recency.** The latest curation pass was checked against arXiv on **July 5, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
@@ -1371,6 +1371,7 @@ World Models
 | **DreamerV4** | arXiv 2025 | Scalable world-model training for agents | Multi-domain | [![arXiv](https://img.shields.io/badge/arXiv-2509.24527-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.24527) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://danijar.com/project/dreamer4/) |
 | **NCRL** | ICLR 2026 | World-model pretraining with rehearsal and execution guidance | Visuomotor RL | [![arXiv](https://img.shields.io/badge/arXiv-2502.19544-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.19544) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/zhaoyi11/ncrl) |
 | **WorldSample** | arXiv 2026 | Real-synthetic loop with post-trained world-model transitions for data-efficient RL | Real-robot manipulation | [![arXiv](https://img.shields.io/badge/arXiv-2607.02431-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.02431) |
+| **Valdi** | RLC WMW 2026 | Value diffusion world model with latent MPC | Control | [![arXiv](https://img.shields.io/badge/arXiv-2607.00917-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00917) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Kit115/ValueDiffusionWorldModels) |
 | **TD-MPC2** | ICLR 2024 | Latent MPC, 104 tasks | Continuous | [![arXiv](https://img.shields.io/badge/arXiv-2310.16828-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.16828) |
 | **DIAMOND** | NeurIPS 2024 | Diffusion WM + RL | Atari | [![arXiv](https://img.shields.io/badge/arXiv-2405.12399-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.12399) |
 | **Think2Drive** | 2024 | BEV latent MBRL | Driving | [![arXiv](https://img.shields.io/badge/arXiv-2402.16720-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16720) |
