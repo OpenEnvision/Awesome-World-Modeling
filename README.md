@@ -3,7 +3,7 @@
 # 🌍 Awesome World Models
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Models?style=social)](https://github.com/OpenEnvision/Awesome-World-Models/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Modeling?style=social)](https://github.com/OpenEnvision/Awesome-World-Models/stargazers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/OpenEnvision/Awesome-World-Models/pulls)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://github.com/OpenEnvision/Awesome-World-Models/blob/main/LICENSE)
 [![Last Updated](https://img.shields.io/badge/Updated-July%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Models/commits/main/README.md)
