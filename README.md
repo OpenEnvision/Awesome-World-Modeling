@@ -2169,37 +2169,12 @@ If you find this repository useful in your research, please cite this curated li
 
 ```bibtex
 @misc{openenvision2026awesomeworldmodels,
-  title={Awesome World Models},
-  author={{OpenEnvision Contributors}},
+  title={Awesome World Modeling},
+  author={{OpenEnvision}},
   year={2026},
   howpublished={GitHub repository},
   url={https://github.com/OpenEnvision/Awesome-World-Models},
   note={A scope-aware, paper-first curated list of world model research}
-}
-```
-
-For background, please also consider citing key foundational works:
-
-```bibtex
-@misc{lecun2022path,
-  title={A Path Towards Autonomous Machine Intelligence},
-  author={LeCun, Yann},
-  year={2022},
-  howpublished={OpenReview}
-}
-
-@article{ha2018world,
-  title={World Models},
-  author={Ha, David and Schmidhuber, J{\"u}rgen},
-  journal={arXiv preprint arXiv:1803.10122},
-  year={2018}
-}
-
-@article{hafner2023dreamerv3,
-  title={Mastering Diverse Domains with World Models},
-  author={Hafner, Danijar and Lillicrap, Timothy and Norouzi, Mohammad and Ba, Jimmy},
-  journal={arXiv preprint arXiv:2301.04104},
-  year={2023}
 }
 ```
 
