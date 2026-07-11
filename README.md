@@ -13,9 +13,10 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 
 *Latest curation pass verified against arXiv on **July 11, 2026**.*
 
-*Badge policy: whenever a paper has an arXiv preprint, show an **arXiv** badge; whenever official code is public, show a **GitHub** badge.*
+## 📰 News
 
-> This repository prioritizes taxonomic clarity, primary-source links, and reproducible resources over raw volume alone.
+- **[2026-07-11]** 🎉 **[WorldFoundry](https://github.com/OpenEnvision/WorldFoundry)** and its companion repository **Awesome World Modeling** are now open source! We welcome ⭐ stars, bug reports, feature requests, discussions, and pull requests from the community.
+
 
 </div>
 
@@ -24,13 +25,6 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 | ![internal & external world model](image/lecun_wm.png) | ![Historical wave map](image/world_qa.png) |
 
 ---
-
-## ⭐ Why Star This Repo?
-
-- **Taxonomy-aware, not a paper dump.** Entries are organized by research paradigm, then by domain, representation, and downstream use.
-- **Primary-source first.** arXiv, official project pages, conference pages, datasets, leaderboards, and official code are prioritized over secondary commentary.
-- **Cross-domain coverage.** The list connects generative world models, representational world models, agentic planning, embodied AI, robotics, autonomous driving, 3D/4D scenes, science, and benchmarks.
-- **Maintained for recency.** The latest curation pass was checked against arXiv on **July 11, 2026**, with recent 2026 additions distributed throughout the taxonomy.
 
 ## 🚀 Start Here
 
