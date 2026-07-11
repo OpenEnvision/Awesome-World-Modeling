@@ -13,12 +13,12 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 
 *Latest curation pass verified against arXiv on **July 11, 2026**.*
 
+</div>
+
 ## 📰 News
 
 - **[2026-07-11]** 🎉 **[WorldFoundry](https://github.com/OpenEnvision/WorldFoundry)** and its companion repository **Awesome World Modeling** are now open source! We welcome ⭐ stars, bug reports, feature requests, discussions, and pull requests from the community.
 
-
-</div>
 
 | Internal & External "World Model" | Historical Wave Map |
 | :---: | :---: |
