@@ -32,7 +32,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 | --- | --- |
 | The definition and scope of world models | [Definition and Scope](#definition-and-scope), [Taxonomic Overview](#-taxonomic-overview) |
 | Classic foundations and cognitive origins | [Mind World Models](#0--mind-world-models--biological-origins--foundational-definitions), [Latent Dynamics Models](#21-latent-dynamics-models-rssm--dreamer-family) |
-| Video, games, and interactive simulation | [Game & Interactive World Simulation](#11-game--interactive-world-simulation), [General Video World Models](#16-general-video-world-models--rollout-backbones) |
+| Video, games, and interactive simulation | [Game & Interactive World Simulation](#11-game--interactive-world-simulation), [General Video World Models](#16-general-video-world-models--rollout-backbones), [Persistent Narrative & Multi-Shot Video](#17--persistent-narrative--multi-shot-video-world-models) |
 | Autonomous driving world models | [Autonomous Driving — Generative](#12-autonomous-driving--generative), [Occupancy & BEV Representations](#23-occupancy--bev-representations), [Closed-Loop Simulation & Evaluation](#33-closed-loop-simulation--evaluation) |
 | Robotics, VLA, and World Action Models | [Embodied AI & Robotics](#13-embodied-ai--robotics--generative), [VLA & WAM](#134-world-model-based-vision-language-action-vla--world-action-models-wam), [World-Model-Guided Planning](#32-world-model-guided-planning) |
 | Benchmarks, datasets, and open toolkits | [Benchmarks & Evaluation](#-benchmarks--evaluation), [Community Resources & Open Repositories](#-community-resources--open-repositories) |
@@ -97,6 +97,7 @@ A paper is strongest as a world-model entry when it does at least **two** of the
   - [1.4 🌐 3D / 4D Scene Generation](#14-3d--4d-scene-generation)
   - [1.5 🔬 Scientific & Physical World Modeling](#15-scientific--physical-world-modeling)
   - [1.6 🎞️ General Video World Models & Rollout Backbones](#16-general-video-world-models--rollout-backbones)
+  - [1.7 🎬 Persistent Narrative & Multi-Shot Video World Models](#17--persistent-narrative--multi-shot-video-world-models)
 - [2 · 🏗️ Representational World Models](#2--representational-world-models)
   - [2.1 Latent Dynamics Models (RSSM / Dreamer Family)](#21-latent-dynamics-models-rssm--dreamer-family)
   - [2.2 Joint Embedding Predictive Architectures (JEPA)](#22-joint-embedding-predictive-architectures-jepa)
@@ -135,7 +136,8 @@ World Models
 │   │   ├── 1.3 Embodied AI & Robotics
 │   │   ├── 1.4 3D / 4D Scene Generation
 │   │   ├── 1.5 Scientific & Physical World Modeling
-│   │   └── 1.6 General Video World Models & Rollout Backbones
+│   │   ├── 1.6 General Video World Models & Rollout Backbones
+│   │   └── 1.7 Persistent Narrative & Multi-Shot Video World Models
 │   │
 │   └── By Architecture (cross-domain)
 │       ├── Diffusion-based
@@ -337,6 +339,9 @@ World Models
 
 - **RealPlay** — "From Virtual Games to Real-World Play." *arXiv* 2506.18901 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2506.18901-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.18901) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://wenqsun.github.io/RealPlay/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/wenqsun/Real-Play)
   > Bridges game-world training and real-world embodied play through shared world representations.
+
+- **Unbounded** — "Unbounded: A Generative Infinite Game of Character Life Simulation." *arXiv* 2410.18975 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2410.18975-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.18975)
+  > Tracks a set of character attributes (hunger, energy, fun, hygiene) plus the current environment and interaction history across game turns, updates them with a distilled real-time LLM game engine in response to open-ended player actions, and renders each turn with regionally consistent image generation, yielding an open-ended playable character-life simulation.
 
 - **Waypoint-1** — "The Path to Real-Time Worlds and Why It Matters." *Over.world Blog* (2025). [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://over.world/blog/the-path-to-real-time-worlds-and-why-it-matters)
 
@@ -783,6 +788,12 @@ World Models
 - **3D-Anchored Lookahead Planning** — "3D-Anchored Lookahead Planning for Persistent Robotic Scene Memory via World-Model-Based MCTS." *arXiv* 2604.11302 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2604.11302-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.11302)
   > Couples persistent 3D scene memory with lookahead planning, useful for long-horizon robotic exploration.
 
+- **GenEx** — "GenEx: Generating an Explorable World." *arXiv* 2412.09624 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2412.09624-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.09624)
+  > Generates a panoramic environment from a single image, rolls it forward with panoramic video diffusion under agent movement commands, and feeds the imagined observations back to update a GPT-driven agent's beliefs for exploration and planning, with spatial coherence measured via loop-closure consistency.
+
+- **Pathdreamer** — "Pathdreamer: A World Model for Indoor Navigation." *ICCV* 2021. [![arXiv](https://img.shields.io/badge/arXiv-2105.08756-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2105.08756)
+  > Maintains an accumulating 3D point-cloud of previously observed views across navigation steps, uses it to synthesize the next 360° panorama under trajectory actions with reprojection-consistent revisits, and demonstrates look-ahead rollouts that improve vision-and-language navigation planning.
+
 - **SIMA** — "Scalable Instructable Multiworld Agent." *Google DeepMind* (2024). [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://deepmind.google/discover/blog/sima-generalist-ai-agent-for-3d-virtual-environments/) [![arXiv](https://img.shields.io/badge/arXiv-2404.10179-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.10179)
   > A generalist AI agent that follows language instructions across diverse 3D virtual environments, including commercial games, using world model pretraining.
 
@@ -1172,7 +1183,7 @@ World Models
 
 > Models that generate three-dimensional or four-dimensional (spatial + temporal) world representations, typically as explorable environments.
 
-#### 1.4.1 Neural Radiance Fields & Gaussian-Based
+#### 1.4.1 Explorable 3D Scene Generation & Persistent Representations
 
 - **EmerNeRF** — "EmerNeRF: Emergent Spatial-Temporal Scene Decomposition via Self-Supervision." *ICLR* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2311.02077-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2311.02077) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVlabs/EmerNeRF)
 
@@ -1208,6 +1219,33 @@ World Models
 - **WonderWorld** — "WonderWorld: Interactive 3D Scene Generation from a Single Image." *arXiv* 2406.09394 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2406.09394-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.09394) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://kovenyu.com/wonderworld/)
   > Single-image interactive 3D scene generation, useful as an early 3D world-model baseline.
 
+- **DreamAnywhere** — "DreamAnywhere: Object-Centric Panoramic 3D Scene Generation." *WACV* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2506.20367-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.20367)
+  > Maintains an object-decomposed scene state — individually lifted 3D assets over an inpainted background — from a single panorama, and uses it to support both free navigation and object-level scene editing, making the generated world revisitable and modifiable rather than a one-shot render.
+
+- **SceneScape** — "SceneScape: Text-Driven Consistent Scene Generation." *NeurIPS* 2023. [![arXiv](https://img.shields.io/badge/arXiv-2302.01133-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2302.01133)
+  > Maintains a progressively accumulated scene mesh across generation steps, uses it to render already-committed geometry and synthesize only newly disoccluded regions under a camera trajectory, enabling geometrically consistent perpetual scene rollout.
+
+- **WorldGen** — "WorldGen: From Text to Traversable and Interactive 3D Worlds." *CVPR* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2511.16825-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.16825)
+  > Plans a world layout with an LLM, constrains generation to a navigation mesh so the resulting scene stays traversable, and decomposes it into object-aware assets, producing navigable, editable 3D environments loadable in standard game engines.
+
+- **LayerPano3D** — "LayerPano3D: Layered 3D Panorama for Hyper-Immersive Scene Generation." *SIGGRAPH* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2408.13252-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.13252)
+  > Maintains a layered 3D Gaussian scene state lifted from a generated panorama, with occluded content stored behind foreground layers, so viewpoint changes during free in-scene walking render coherent geometry — a persistent navigable world rather than fixed-viewpoint panorama viewing.
+
+- **WonderJourney** — "WonderJourney: Going from Anywhere to Everywhere." *CVPR* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2312.03884-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2312.03884)
+  > Conditions each newly generated 3D scene on the current scene's image and lifted point-cloud geometry plus a textual history of visited scenes (rather than one accumulated persistent point cloud), with LLM-scripted scene descriptions and VLM verification that regenerates failed scenes, enabling extended scene-to-scene rollout with automated repair.
+
+- **Holodeck** — "Holodeck: Language Guided Generation of 3D Embodied AI Environments." *CVPR* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2312.09067-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2312.09067) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://yueyang1996.github.io/holodeck/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/allenai/Holodeck)
+  > Generates fully populated, executable AI2-THOR environments from language via LLM-proposed spatial-relational constraints and asset retrieval, and the resulting scenes are directly used to train and evaluate embodied navigation agents.
+
+- **PanoWorld-X** — "PanoWorld-X: Generating Explorable Panoramic Worlds via Sphere-Aware Video Diffusion." *arXiv* 2509.24997 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2509.24997-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.24997)
+  > Generates explorable panoramic worlds with sphere-aware video diffusion, evolving the 360° scene under user-specified camera routes for free exploration.
+
+- **OmniRoam** — "OmniRoam: World Wandering via Long-Horizon Panoramic Video Generation." *arXiv* 2603.30045 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.30045-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.30045)
+  > Targets long-horizon panoramic world wandering, rolling a 360° scene forward under trajectory control for extended camera-conditioned exploration.
+
+- **InfiniteNature-Zero** — "InfiniteNature-Zero: Learning Perpetual View Generation of Natural Scenes from Single Images." *ECCV* 2022. [![arXiv](https://img.shields.io/badge/arXiv-2207.11148-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2207.11148) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/google-research/google-research/tree/master/infinite_nature_zero)
+  > Learns perpetual view generation from single photos with a render-refine-repeat loop, evolving scene geometry frame-to-frame under a camera trajectory for unbounded flythrough rollout.
+
 - **World Labs (Marble)** — "Marble: A Multimodal World Model." *World Labs Blog* (2025). [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://www.worldlabs.ai/blog) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://www.worldlabs.ai/)
   > Fei-Fei Li's startup; text- and image-driven 3D world generation with explorable geometry and depth.
 
@@ -1239,6 +1277,9 @@ World Models
 
 - **AnchorWorld** — "AnchorWorld: Embodied Egocentric World Simulation with View-based Evolution Customization." *arXiv* 2606.07326 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.07326-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.07326)
   > Uses 3D human motion and anchor-view customization to keep egocentric interactive world simulation spatially grounded and controllable over evolving scenes.
+
+- **HoloTime** — "HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation." *ACM MM* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2504.21650-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.21650)
+  > Maintains a persistent 4D Gaussian scene state distilled from panorama-conditioned panoramic video, so a dynamic scene can be re-rendered from user-chosen novel viewpoints over time instead of replayed as a fixed clip.
 
 [⬆ Back to Top](#-table-of-contents)
 
@@ -1341,6 +1382,18 @@ World Models
 - **Self-Forcing** — "Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion." *arXiv* 2506.08009 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2506.08009-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.08009) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://self-forcing.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/guandeh17/Self-Forcing)
   > Addresses rollout drift in autoregressive video diffusion, a core bottleneck for interactive world models.
 
+- **StreamingT2V** — "StreamingT2V: Consistent, Dynamic, and Extendable Long Video Generation from Text." *arXiv* 2403.14773 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2403.14773-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2403.14773) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Picsart-AI-Research/StreamingT2V)
+  > Autoregressive chunk-wise long-video generation that carries short-term previous-chunk features and a long-term initial-frame appearance anchor into each new chunk to suppress drift.
+
+- **LongLive** — "LongLive: Real-time Interactive Long Video Generation." *ICLR* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2509.22622-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22622) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVlabs/LongLive/tree/v1.0)
+  > Frame-level autoregressive long-video backbone with an attention sink and KV re-caching that absorbs a new user prompt mid-rollout while preserving the generated prefix, supporting real-time sequential prompt changes.
+
+- **Rolling Forcing** — "Rolling Forcing: Autoregressive Long Video Diffusion in Real Time." *arXiv* 2509.25161 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2509.25161-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.25161) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://kunhao-liu.github.io/Rolling_Forcing_Webpage/)
+  > Denoises frames in a rolling window with an attention-sink cache to suppress error accumulation, explicitly framing real-time streaming rollout as machinery for interactive world modeling.
+
+- **Deep Forcing** — "Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression." *arXiv* 2512.05081 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2512.05081-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.05081)
+  > Training-free deep-sink and cache-compression scheme for streaming autoregressive video generation, demonstrated with online controls during an ongoing rollout.
+
 - **Causal Forcing** — "Causal Forcing: Autoregressive Diffusion Distillation Done Right for High-Quality Real-Time Interactive Video Generation." *arXiv* 2602.02214 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2602.02214-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.02214) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://thu-ml.github.io/CausalForcing.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/thu-ml/Causal-Forcing)
   > Distills causal video generation into a real-time interactive rollout recipe.
 
@@ -1388,6 +1441,44 @@ World Models
 
 - **Geometry Forcing** — "Geometry Forcing: Marrying Video Diffusion and 3D Representation for Consistent World Modeling." *arXiv* 2507.07982 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2507.07982-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.07982) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://GeometryForcing.github.io)
   > Couples video diffusion with 3D representations to improve geometric consistency during rollouts.
+
+[⬆ Back to Top](#-table-of-contents)
+
+---
+
+### 1.7 🎬 Persistent Narrative & Multi-Shot Video World Models
+
+> Every video generator implicitly models visual dynamics, but implicit dynamics alone are below the bar here. An entry needs documented state, memory, or structured planning that crosses a chunk/shot/scene boundary, plus continued prediction from that state, intervention on the ongoing rollout, or evaluation of its downstream use. Streaming has a higher interactivity ceiling only when the system accepts new input after a generated prefix is already available; autoregression, generation speed, identity consistency, or full-sequence attention alone does not suffice — nor does video length, visual quality, or multi-shot output. Methods whose primary contribution is generic causal/streaming rollout machinery live in §1.6; entries that overlap both are placed by primary contribution.
+
+#### 1.7.1 Online Streaming & Intervenable Narrative Rollouts
+
+- **ShotStream** — "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling." *arXiv* 2603.25746 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.25746-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.25746) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/KlingAIResearch/ShotStream)
+  > Carries a global cache of sparsely selected conditional frames from earlier shots into causal streaming generation of each next shot, accepting newly injected story prompts after prior shots are already generated, so the narrative can be steered mid-rollout rather than fixed in an offline script.
+
+#### 1.7.2 Persistent Cross-Shot State & Memory
+
+- **StoryMem** — "StoryMem: Multi-shot Long Video Storytelling with Memory." *arXiv* 2512.19539 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2512.19539-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.19539) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Kevin-thu/StoryMem) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://kevin-thu.github.io/StoryMem/)
+  > Keeps a dynamically updated memory of keyframes selected from previously generated shots and conditions a memory-to-video model on it when producing each subsequent shot under its own prompt, so later shots inherit scene and character appearance from earlier ones.
+
+- **OneStory** — "OneStory: Coherent Multi-Shot Video Generation with Adaptive Memory." *CVPR* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2512.07802-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.07802) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://zhaochongan.github.io/projects/OneStory/)
+  > Selects caption-relevant latent frames from prior shots as an adaptive memory and conditions each new shot on them under its per-shot prompt, propagating visual context across shot boundaries inside the model rather than generating independent clips.
+
+- **FilmWeaver** — "FilmWeaver: Weaving Consistent Multi-Shot Videos with Cache-Guided Autoregressive Diffusion." *AAAI* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2512.11274-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.11274) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://filmweaver.github.io)
+  > Feeds a dual-level cache into each autoregressively generated next shot — prior-shot keyframes for cross-shot identity and scene context, plus recent within-shot frame history for motion continuity — enabling arbitrary-length multi-shot rollouts whose later shots consume context from earlier ones.
+
+- **STAGE (narrative)** — "STAGE: Storyboard-Anchored Generation for Cinematic Multi-shot Narrative." *CVPR* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2512.12372-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.12372)
+  > Conditions each subsequent shot on an entity-consistency memory pack gathered from earlier shots together with predicted start/end storyboard anchors, rendering the narrative script as anchored multi-shot rollouts rather than independently prompted clips. (Distinct from the driving world model STAGE in §1.2.1.)
+
+- **Make-A-Story** — "Make-A-Story: Visual Memory Conditioned Consistent Story Generation." *CVPR* 2023. [![arXiv](https://img.shields.io/badge/arXiv-2211.13319-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2211.13319)
+  > Story-visualization precursor (still images, not video): an autoregressive visual memory over previously generated frames and sentences resolves co-references and keeps actor and background appearance consistent across the frame sequence.
+
+#### 1.7.3 State-Aware Narrative Planning & Rendering
+
+- **MovieDreamer** — "MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequence." *ICLR* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2407.16655-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.16655) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/aim-uofa/MovieDreamer)
+  > Builds a multimodal script — character descriptions with face embeddings, scene elements, and plot — and autoregressively predicts later keyframes conditioned on it before diffusion renders each clip, planning long multi-scene narratives instead of prompting shots independently.
+
+- **VideoDirectorGPT** — "VideoDirectorGPT: Consistent Multi-scene Video Generation via LLM-Guided Planning." *COLM* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2309.15091-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2309.15091) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/HL-hanlin/VideoDirectorGPT)
+  > Generates an upfront LLM video plan — scene descriptions, entity lists, per-scene layouts, and consistency groupings marking which entities recur — and feeds it to a layout-guided renderer for each scene, coordinating multi-scene generation through the shared plan rather than a list of independent shot prompts.
 
 [⬆ Back to Top](#-table-of-contents)
 
@@ -2017,6 +2108,13 @@ World Models
 | **OpenDriveLab WM Track** | Driving | CVPR 2025 world model challenge | [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://opendrivelab.com/challenge25/#1x-wm) |
 | **1x World Model Challenge** | Robotics | Real-world robot video prediction | [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://www.1x.tech/discover/1x-world-model-challenge) |
 | **Minecraft Diamond (DreamerV3)** | Embodied | Hierarchical long-horizon task completion | [![arXiv](https://img.shields.io/badge/arXiv-2301.04104-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2301.04104) |
+| **EntityBench** | Multi-shot video generation | Entity presence and visual consistency over recurrence gaps up to 48 shots | [![arXiv](https://img.shields.io/badge/arXiv-2605.15199-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.15199) |
+| **MSVBench** | Multi-shot video generation | Cross-shot consistency including a State Shift & Persistence metric, via hybrid LMM-plus-expert judging | [![arXiv](https://img.shields.io/badge/arXiv-2602.23969-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.23969) |
+| **MSAVBench** | Multi-shot audio-video generation | Adjacent resource: cross-shot layout, subject/background/style/color, music and speaker-timbre consistency plus audio-visual quality | [![arXiv](https://img.shields.io/badge/arXiv-2605.20183-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.20183) |
+| **MuSS** | Multi-shot subject-to-video | Adjacent resource: identity preservation, anti-copy-paste 3D variation, and narrative logic across shots | [![arXiv](https://img.shields.io/badge/arXiv-2604.23789-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.23789) |
+| **StoryEval** | Story video generation | Completion of 2-4 ordered consecutive events per prompt | [![arXiv](https://img.shields.io/badge/arXiv-2412.16211-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.16211) |
+| **ChronoMagic-Bench** | Time-lapse video generation | Metamorphic amplitude and temporal coherence across biological, physical, meteorological, and human-created transformations (MTScore / CHScore) | [![arXiv](https://img.shields.io/badge/arXiv-2406.18522-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.18522) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/PKU-YuanGroup/ChronoMagic-Bench) |
+| **VideoPhy-2** | Video generation / physics | Semantic adherence and physical commonsense across 200 prompted actions, including conservation-law failures | [![arXiv](https://img.shields.io/badge/arXiv-2503.06800-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.06800) |
 
 [⬆ Back to Top](#-table-of-contents)
 
@@ -2145,6 +2243,7 @@ World Models
 | **Cosmos 3: Omnimodal World Models for Physical AI** | NVIDIA Technical Report | 2026 | [![arXiv](https://img.shields.io/badge/arXiv-2606.02800-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.02800) [![Report](https://img.shields.io/badge/Report-Link-4C566A?logo=readthedocs&logoColor=white)](https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/NVIDIA/Cosmos) |
 | **SIMA: A generalist AI agent for 3D virtual environments** | Google DeepMind | 2024 | [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://deepmind.google/discover/blog/sima-generalist-ai-agent-for-3d-virtual-environments/) |
 | **The Path to Real-Time Worlds and Why It Matters** | Over.world | 2025 | [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://over.world/blog/the-path-to-real-time-worlds-and-why-it-matters) |
+| **RTFM: A Real-Time Frame Model** | World Labs | 2025 | [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://www.worldlabs.ai/blog/rtfm) |
 | **Deep Dive into Yann LeCun's JEPA** | Rohit Bandaru | 2024 | [![Blog](https://img.shields.io/badge/Blog-Post-F97316?logo=rss&logoColor=white)](https://rohitbandaru.github.io/blog/JEPA-Deep-Dive/) |
 | **World Model Workshop at Mila** | Mila Workshop | 2026 | [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://world-model-mila.github.io/) |
 
