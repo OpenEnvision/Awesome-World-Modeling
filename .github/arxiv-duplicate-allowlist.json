@@ -34,5 +34,9 @@
   "2605.30263": "Intentional cross-reference across game-simulation and resource sections.",
   "2605.30542": "Intentional cross-reference across physical-world-modeling and safety/theory sections.",
   "2606.01600": "Intentional cross-reference across closed-loop evaluation and benchmark sections.",
-  "2606.02800": "Intentional cross-reference across rollout-backbone and resource sections."
+  "2606.02800": "Intentional cross-reference across rollout-backbone and resource sections.",
+  "2206.14176": "Intentional cross-reference: DayDreamer in Dreamer-family table (§2.1) and locomotion (§1.3.3).",
+  "2509.24527": "Intentional cross-reference: DreamerV4 in MBRL table (§3.1) and Dreamer-family table (§2.1).",
+  "2608.09298": "Intentional cross-reference: WorldSimProbe in closed-loop evaluation (§3.3) and Benchmarks table.",
+  "2511.08544": "Intentional cross-reference: LeJEPA paper (§2.2) and toolkit row."
 }
