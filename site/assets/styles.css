@@ -73,6 +73,7 @@
 .resource-group { margin-top:42px; }
 .resource-group h2 { font-size:26px; padding-bottom:20px; border-bottom:1px solid var(--ink); }
 .resource-directory-entry { display:grid; grid-template-columns:minmax(0,1fr) 240px; gap:36px; padding:24px 0; border-bottom:1px solid var(--line); }
+.resource-directory-entry .entry-resources { grid-area:auto; align-self:start; }
 .resource-directory-entry h3, .resource-directory-entry h4 { font-size:19px; line-height:1.4; letter-spacing:-.02em; }
 .resource-directory-entry p { font-size:14px; color:var(--muted); margin-top:8px; }
 .resource-group-child { margin-top:30px; }
@@ -140,6 +141,7 @@
 @media(max-width:1180px) { .guide-layout { grid-template-columns:208px minmax(0,1fr); gap:32px; } }
 @media(max-width:900px) { .guide-layout { grid-template-columns:175px minmax(0,1fr); gap:25px; } .guide-contents { padding-right:18px; } .guide-contents a { font-size:12px; } }
 @media(max-width:680px) {
+ .site-header nav>a[href='./#about'] { display:none; }
  .site-header nav>a[href='#taxonomy'],.site-header nav>a[href='./#taxonomy'] { display:none; }
  .guide-main { padding-block:30px; }
  .guide-intro h1 { font-size:38px; }
@@ -163,4 +165,8 @@
  .guide-prose pre { padding:14px; }
  .resource-fields { grid-template-columns:1fr; gap:5px; }
  .resource-fields dd { margin-bottom:8px; }
+}
+@media(max-width:380px) {
+ .header-inner { gap:8px; }
+ .site-header nav { gap:10px; }
 }

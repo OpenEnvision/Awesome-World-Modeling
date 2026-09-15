@@ -22,6 +22,10 @@ function search() {
   history.replaceState({},'',url.pathname + url.search + url.hash);
 }
 input.value = initial;
+window.addEventListener('popstate',()=>{
+  input.value = new URLSearchParams(location.search).get('q')?.slice(0,300) || '';
+  search();
+});
 input.addEventListener('input',search);
 document.querySelector('#guide-search-form').addEventListener('submit',event=>{event.preventDefault();search();});
 for (const button of document.querySelectorAll('[data-guide-reset]')) button.addEventListener('click',()=>{input.value='';search();input.focus();});

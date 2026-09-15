@@ -18,6 +18,10 @@ function search() {
   history.replaceState({},'',url.pathname + url.search + url.hash);
 }
 input.value = new URLSearchParams(location.search).get('q')?.slice(0,300) || '';
+window.addEventListener('popstate',()=>{
+  input.value = new URLSearchParams(location.search).get('q')?.slice(0,300) || '';
+  search();
+});
 input.addEventListener('input',search);
 document.querySelector('#resource-search-form').addEventListener('submit',event=>{event.preventDefault();search();});
 document.querySelector('#clear-resource-search').addEventListener('click',()=>{input.value='';search();input.focus();});
