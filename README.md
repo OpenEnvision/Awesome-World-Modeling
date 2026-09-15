@@ -117,7 +117,7 @@ The taxonomy has one deliberate spine:
 
 1. Decide **what kind of model** you care about. Synthesizing plausible futures → [1 · Generative](#1--generative-world-models). Learning structured internal state without pixel decoding → [2 · Representational](#2--representational-world-models). Coupling a world model to acting, planning, and evaluation → [3 · Agentic](#3--agentic-world-models). Cognitive and biological grounding → [0 · Mind World Models](#0--mind-world-models--biological-origins--foundational-definitions).
 2. Then narrow by **domain or mechanism** inside that paradigm (e.g. 1.2 driving, 2.2 JEPA, 3.3 closed-loop evaluation).
-3. When a paper is domain-specific, it is filed by its **main technical role first** and domain second. A JEPA-style LiDAR model lives under driving generative LiDAR (§1.2.3) with a cross-reference from JEPA (§2.2), not the other way around.
+3. When a paper is domain-specific, it is filed by its **main technical role first** and domain second. For example, JEPLO and GLAM live under JEPA (§2.2) because they predict latent representations, with robotics domains recorded on each entry.
 
 The [Start Here](#-start-here) table maps common intents directly to sections. The [Taxonomic Overview](#-taxonomic-overview) shows the full tree at a glance.
 
@@ -1495,9 +1495,6 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 #### 1.3.2 Navigation & Scene Understanding
 
-- **GLAM** — "GLAM: Training a latent world model over global spatiotemporal memory for active exploration and navigation." *arXiv* 2609.14561 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.14561-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.14561)
-  > Jointly predicts future map tokens and waypoint latents from global spatial memory and a navigation goal, supporting exploration and ObjectNav without future RGB reconstruction.
-
 - **CST-WM** — "CST-WM: A Causally Structured World Model for Embodied Visual Tracking." *arXiv* 2609.06302 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.06302-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.06302)
   > Factorizes target evidence, robot motion, and observation dynamics to prevent spurious direct action effects, then uses predictive control for visual tracking and target reacquisition.
 
@@ -1624,9 +1621,6 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 ---
 
 #### 1.3.3 Locomotion & Full-Body Control
-
-- **JEPLO** — "JEPLO: Joint-Embedding Predictive Learning for LiDAR-Based Legged Locomotion." *arXiv* 2609.15770 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.15770-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.15770) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/ASIG-X/JEPLO)
-  > Learns predictive terrain representations from LiDAR and proprioception with a JEPA teacher-student pipeline for robust legged locomotion and sim-to-real transfer.
 
 - **DWMP** — "DWMP: Leveraging Dual World Models for Humanoid Obstacle Traversal." *arXiv* 2609.12347 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.12347-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.12347)
   > Combines a Koopman model of proprioceptive dynamics with an RSSM visual world model to supply complementary predictive features for humanoid obstacle traversal.
@@ -3300,6 +3294,14 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 ### 2.2 Joint Embedding Predictive Architectures (JEPA)
 
 > Instead of generating observations, JEPA models predict abstract *representations* of future states. Inspired by LeCun's energy-based formulation.
+
+- **JEPLO** — "JEPLO: Joint-Embedding Predictive Learning for LiDAR-Based Legged Locomotion." *arXiv* 2609.15770 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.15770-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.15770) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/ASIG-X/JEPLO)
+  > Learns predictive terrain representations from LiDAR and proprioception with a JEPA teacher-student pipeline for robust legged locomotion and sim-to-real transfer.
+  > **Domain:** Robotics / Legged locomotion.
+
+- **GLAM** — "GLAM: Training a latent world model over global spatiotemporal memory for active exploration and navigation." *arXiv* 2609.14561 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.14561-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.14561)
+  > Jointly predicts future map tokens and waypoint latents from global spatial memory and a navigation goal, supporting exploration and ObjectNav without future RGB reconstruction.
+  > **Domain:** Robotics / Exploration and navigation.
 
 - **DUET-DINO** — "DUET-DINO: Simultaneous Cross-View World Modeling for Latent Planning in Robot Manipulation." *arXiv* 2609.10506 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.10506-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.10506) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://utn-air.github.io/DUET-DINO)
   > Jointly predicts action-conditioned side- and wrist-camera representations for full 7-DoF latent planning, exploiting complementary scene and gripper views during manipulation.

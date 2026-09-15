@@ -156,9 +156,11 @@ function sourceRecord(raw, context, metadata) {
   const currentHeading = headingsForEntry.at(-1);
   const categoryPath = headingsForEntry.map(({ label }) => label);
   const sectionId = currentHeading.id;
-  let description = plainText(raw.split('\n').filter((text) => /^\s*>/.test(text)).map((text) => text.replace(/^\s*>\s?/, '')).join(' '));
+  const annotations = raw.split('\n').filter((text) => /^\s*>/.test(text)).map((text) => text.replace(/^\s*>\s?/, ''));
+  const domainAnnotation = annotations.find((text) => /^\*\*Domain:\*\*/.test(text));
+  let description = plainText(annotations.filter((text) => text !== domainAnnotation).join(' '));
   let venue = '';
-  let domain = '';
+  let domain = plainText(domainAnnotation?.replace(/^\*\*Domain:\*\*\s*/, '') ?? '').replace(/\.$/, '');
   let sourceFields = [];
   let date = normalizeDate(meta.published);
   let citationYears = [...cleanCitation.matchAll(/\b((?:19|20)\d{2})\b/g)];
