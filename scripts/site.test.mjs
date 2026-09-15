@@ -159,3 +159,30 @@ test('built pages retain initial rows, all resources, and all resource-only arXi
   for (const id of resourceOnly) assert.ok(resourcePage.includes(`arxiv.org/abs/${id}`),id);
   assert.equal(new Set([...coreIds,...resourceOnly]).size,data.stats.uniqueArxivPapers);
 });
+
+test('repository-root Pages entrypoints resolve local assets and module data', async () => {
+  const base = new URL('https://openenvision.github.io/Awesome-World-Modeling/');
+  for (const page of ['index.html', 'guide.html', 'resources.html', '404.html']) {
+    const html = await readFile(path.join(root, page), 'utf8');
+    const portable = await readFile(path.join(root, 'dist', page), 'utf8');
+    assert.equal(html, portable.replaceAll('./assets/', './site/assets/'));
+    assert.doesNotMatch(html, /\{\{[A-Z]+\}\}/, 'Published HTML must have all template tokens rendered');
+    for (const [, value] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
+      if (!value.startsWith('./')) continue;
+      const url = new URL(value.replaceAll('&amp;', '&'), base);
+      const local = decodeURIComponent(url.pathname.slice(base.pathname.length)) || 'index.html';
+      await readFile(path.join(root, local));
+    }
+  }
+  assert.equal(await readFile(path.join(root, '.nojekyll'), 'utf8'), '');
+  const appURL = new URL('site/assets/app.js', base);
+  const app = await readFile(path.join(root, 'site/assets/app.js'), 'utf8');
+  const dataPath = app.match(/fetch\(new URL\('([^']+)'/)[1];
+  assert.equal(new URL(dataPath, appURL).pathname, '/Awesome-World-Modeling/site/data/library.json');
+  for (const asset of ['app.js', 'catalog-adapter.js', 'guide.js', 'resources.js']) {
+    const source = await readFile(path.join(root, 'site/assets', asset), 'utf8');
+    for (const [, dependency] of source.matchAll(/from '(\.\/[^']+)'/g)) {
+      await readFile(path.join(root, 'site/assets', dependency));
+    }
+  }
+});

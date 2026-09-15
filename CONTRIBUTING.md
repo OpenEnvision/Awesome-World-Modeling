@@ -82,4 +82,4 @@ By contributing, you agree that your contributions are released under the reposi
 
 ## Website
 
-The OpenEnvision Library website is generated from this README. See [WEBSITE.md](WEBSITE.md) for local preview, validation, and GitHub Pages deployment. After a list update, run `npm run build` and commit the regenerated `site/data/library.json` with the README changes.
+The OpenEnvision Library website is generated from this README. See [WEBSITE.md](WEBSITE.md) for local preview, validation, and GitHub Pages deployment. After a list update, run `npm run build` and commit the regenerated root `index.html`, `guide.html`, `resources.html`, `404.html`, `.nojekyll`, and `site/data/library.json` with the README changes. GitHub Pages publishes the `main` branch from `/(root)`; see [WEBSITE.md](WEBSITE.md) for setup.
