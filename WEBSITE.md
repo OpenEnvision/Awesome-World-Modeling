@@ -15,10 +15,10 @@ Open `http://127.0.0.1:4173/Awesome-World-Modeling/`. The server binds to the lo
 ## Content and validation
 
 - Edit research entries in `README.md`.
-- `scripts/build-site-data.mjs` derives `site/data/library.json` from README rows and the verified arXiv metadata in `curation/2026-09-15.json`.
+- `scripts/build-site-data.mjs` derives `site/data/library.json` from README rows and the verified arXiv metadata in the latest dated `curation/*.json` snapshot.
 - `site/index.html` is the homepage template. `site/assets/` contains styles, browser logic, and original SVG diagrams.
-- `scripts/build-site.mjs` generates `dist/`, including an initial page of server-rendered entries, searchable resources, the reading guide, and a 404 page. All asset paths support the repository's GitHub Pages subpath.
-- The six research collections preserve all 1,551 entries and intentional cross-listings. The separate directory includes 129 resources: workshops, tools, datasets, organizations, and technical reports. The 1,492 arXiv count refers to distinct IDs across both surfaces, not 1,492 unique models.
+- `scripts/build-site.mjs` generates ready-to-publish `index.html`, `guide.html`, `resources.html`, `404.html`, and `.nojekyll` beside `README.md`. Root pages use the existing `site/assets/`, `site/data/`, and `image/` directories. A portable `dist/` build is also generated. All asset paths support the repository's GitHub Pages subpath.
+- The six research collections preserve all 1,557 entries and intentional cross-listings. The separate directory includes 129 resources: workshops, tools, datasets, organizations, and technical reports. The 1,498 arXiv count refers to distinct IDs across both surfaces, not 1,498 unique models.
 - `scripts/guide-content.mjs` renders 15 substantive README chapters, including reading tracks, history, architecture comparisons, evaluation dimensions, open problems, glossary, and FAQ. Internal links resolve to website chapters, taxonomy filters, and resource sections. The original README table of contents is replaced by the website navigation.
 - Research detail views preserve full citations and source table fields. Collection scope, the WAM survey inclusion note, resource ownership, and source links remain available in the corresponding views.
 - Bookmarks stay in browser storage under a World Modeling-specific key. No account or server is needed.
@@ -36,9 +36,20 @@ The checks cover exact README row coverage, arXiv coverage, duplicate policy, de
 
 The target repository is `OpenEnvision/Awesome-World-Modeling`, whose default branch is `main`. The expected website address is `https://openenvision.github.io/Awesome-World-Modeling/`.
 
-For initial setup, a repository administrator or maintainer selects **Settings → Pages → Build and deployment → Source → GitHub Actions**. This is a one-time repository setting; the workflow cannot grant itself the administration permission needed to enable Pages.
+### Enable the site from the repository root
 
-After setup, `.github/workflows/pages.yml` builds, validates, uploads `dist/`, and deploys on each push to `main`. It also supports **Actions → Deploy research library → Run workflow**. No deployment secret or external hosting service is required.
+1. Open **Settings → Pages** in the repository.
+2. Under **Build and deployment → Source**, select **Deploy from a branch**.
+3. Select branch **main** and folder **/(root)**, then click **Save**.
+4. Wait for GitHub's **pages build and deployment** workflow to finish, then click **Visit site**.
+
+These settings require repository administrator or maintainer permissions. The root `index.html` is already built: GitHub Pages does not need to run npm. `.nojekyll` disables Jekyll processing. Opening the HTML file in GitHub's code viewer shows its source; use the Pages address to visit the website.
+
+### Publish later content updates
+
+After editing `README.md` or website sources, run `npm run build` and `npm test`, then commit the regenerated root HTML pages and `site/data/library.json` together with your source changes. `npm run preview` serves this same repository-root layout locally.
+
+`.github/workflows/pages.yml` validates the build and checks that committed root pages are current. Publishing itself is handled by GitHub's branch-based Pages deployment after each push to `main`.
 
 ## Design and attribution
 
