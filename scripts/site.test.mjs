@@ -63,6 +63,9 @@ test('search finds aliases, full paper titles, arXiv IDs, accents, and literal s
   assert.equal(normalize(null), '');
   assert.equal(find({q:'nonexistent phrase qxza999999999'}).length, 0);
   assert.equal(find({q:'  '}).length, catalog.entries.length);
+  assert.ok(find({q:'Nadel'}).some(e=>e.name==='The Hippocampus as a Cognitive Map'), 'Names present only in the original citation remain searchable');
+  const benchmark = catalog.entries.find(e=>e.name==='CALIPER'&&e.kind==='benchmark');
+  assert.ok(benchmark.fields.some(f=>f.label==='Metric Focus'&&f.value===benchmark.notes), 'Benchmark metrics retain their source label');
 });
 
 test('paper, code, project, and Hugging Face filters use the actual destinations', () => {
@@ -76,6 +79,7 @@ test('paper, code, project, and Hugging Face filters use the actual destinations
     assert.ok(selected.every(e=>e.resources.some(r=>resourceKind(r)===kind)));
   }
   assert.ok(find({resource:'hf'}).some(e=>e.name==='WHAM / Muse'));
+  assert.ok(!find({resource:'paper'}).some(e=>e.name==='Atari 100k'), 'An internal README pointer must not count as a direct paper link');
 });
 
 test('chronological sorting keeps unknown years last and never mutates README order', () => {

@@ -15,7 +15,7 @@ function search() {
   document.querySelector('#resource-empty').hidden = count !== 0;
   const url = new URL(location.href);
   if (input.value) url.searchParams.set('q',input.value); else url.searchParams.delete('q');
-  history.replaceState({},'',url.pathname + url.search);
+  history.replaceState({},'',url.pathname + url.search + url.hash);
 }
 input.value = new URLSearchParams(location.search).get('q')?.slice(0,300) || '';
 input.addEventListener('input',search);

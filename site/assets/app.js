@@ -27,7 +27,7 @@ function renderSidebar() {
     const open = expanded.has(c.id) || state.collection === c.id;
     const children = sidebarChildren(c.id);
     return `<div class="category-row"><button class="category-button ${state.collection === c.id && !state.section ? 'active' : ''}" data-collection="${c.id}" aria-pressed="${state.collection === c.id && !state.section}"><span>${c.label}</span><span>${c.count}</span></button>${children ? `<button class="expand-category" data-expand="${c.id}" aria-label="${open ? 'Collapse' : 'Expand'} ${c.label} subcategories" aria-expanded="${open}" aria-controls="sub-${c.id}">›</button>` : ''}</div>${children ? `<div class="subcategories" id="sub-${c.id}" ${open ? '' : 'hidden'}>${children}</div>` : ''}`;
-  }).join('') + `<div class="saved-filter"><button class="category-button ${state.saved ? 'active' : ''}" data-saved-view aria-pressed="${state.saved}"><span>Saved entries</span>${bookmark}<span>${saved.size}</span></button><a class="category-button" href="./resources.html"><span>Resource directory ↗</span><span>${catalog.stats.resources}</span></a></div>`;
+  }).join('') + `<div class="saved-filter"><button class="category-button ${state.saved ? 'active' : ''}" data-saved-view aria-pressed="${state.saved}"><span>Saved entries</span>${bookmark}<span>${saved.size}</span></button><a class="category-button" href="./guide.html"><span>Reading guide ↗</span></a><a class="category-button" href="./resources.html"><span>Resource directory ↗</span><span>${catalog.stats.resources}</span></a></div>`;
 }
 function renderChips() {
   const chips = [];
@@ -52,6 +52,13 @@ function render({sidebar = true} = {}) {
   $('#resource').value = state.resource;
   $('#results-title').textContent = state.saved ? 'Saved entries' : section?.label || collection?.label || 'All entries';
   $('#results-description').textContent = state.saved ? 'Your reading list, saved in this browser.' : section ? `${collection.fullName} · ${catalog.sections.find(s=>s.id===section.parent)?.label || 'Research collection'}` : collection?.description || 'Browse the complete collection.';
+  const scope = state.saved ? null : section ?? catalog.sections.find(s=>!s.parentId && s.collection===state.collection);
+  $('#section-scope').hidden = !scope?.description && !scope?.notes?.length;
+  $('#scope-copy').textContent = scope?.description || '';
+  $('#scope-copy').hidden = !scope?.description;
+  $('#scope-source').hidden = !scope?.description;
+  $('#scope-source').href = scope?.descriptionSource?.url || scope?.source?.url || catalog.repository;
+  $('#scope-notes').innerHTML = (scope?.notes || []).map(note=>`<section class="scope-note"><h4>${esc(note.title)}</h4><p>${esc(note.text)}</p>${note.links.map(resourceHTML).join('')}<a href="${esc(note.source.url)}" target="_blank" rel="noopener noreferrer">Read source note ↗</a></section>`).join('');
   $('#result-count').textContent = `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}${state.q ? ` matching “${state.q}”` : ''}`;
   $('#entries').innerHTML = entries.length ? entries.slice(start,start+PAGE_SIZE).map(e=>rowHTML(e,saved.has(e.id))).join('') : `<div class="empty-state"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg><h4>${state.saved && !saved.size ? 'A place for your next read.' : 'No entries found.'}</h4><p>${state.saved && !saved.size ? 'Use the bookmark beside an entry to keep it here.' : 'Try a different search, year, or collection.'}</p><button class="button" data-reset>Browse all entries</button></div>`;
   let pagination = '';

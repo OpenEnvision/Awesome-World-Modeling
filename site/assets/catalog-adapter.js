@@ -22,12 +22,14 @@ export function adaptCatalog(data) {
     let section = data.sections.find(s => s.id === e.sectionId);
     while (section) { ancestors.push(section.id); section = data.sections.find(s => s.id === section.parentId); }
     const resources = e.allLinks.map(r => ({...r, label: r.type === 'paper' && /^(arxiv|paper)$/i.test(r.label) ? 'Paper' : r.type === 'code' && /^(github|code)$/i.test(r.label) ? 'Code' : r.label}));
+    const summaryLabel = e.sourceFields?.find(f => /^(key contribution|architecture|scope|metric focus|focus)$/i.test(f.label))?.label || 'Summary';
     return {...e, title:e.fullTitle || e.name, notes:e.description, tasks:e.domain, ancestors,
       path:e.categoryPath.slice(e.categoryPath.length > 1 ? 1 : 0).map(cleanHeading), resources,
       sourceUrl:e.source.url,
-      fields:[{label:'Name',value:e.name},{label:'Summary',value:e.description},{label:'Venue',value:e.venue},
+      fields:[{label:'Name',value:e.name},{label:summaryLabel,value:e.description},{label:'Venue',value:e.venue},
         {label:'First submitted',value:e.datePrecision === 'day' ? e.date : ''},
-        {label:'Year',value:e.year},{label:'Domain',value:e.domain},{label:'arXiv',value:e.arxivIds.join(', ')}],
+        {label:'Year',value:e.year},{label:'Domain',value:e.domain},{label:'arXiv',value:e.arxivIds.join(', ')},
+        {label:'Source citation',value:e.citation}],
     };
   });
   return {...data, entries, sections, collections:data.collections.map(c => ({...c,fullName:descriptions[c.id][0],description:descriptions[c.id][1]}))};

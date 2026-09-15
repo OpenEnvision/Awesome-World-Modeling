@@ -84,6 +84,8 @@ function headingLabel(text) {
 }
 
 function linkType(label, url) {
+  // A README cross-reference can mention a paper without being a paper link.
+  if (url.startsWith('#')) return 'related';
   if (/arxiv|paper|nature/i.test(label) || /arxiv\.org\/(abs|pdf|html)\//.test(url)) return 'paper';
   if (/github|code/i.test(label)) return 'code';
   if (/project/i.test(label)) return 'project';
@@ -91,7 +93,6 @@ function linkType(label, url) {
   if (/blog|知乎|official/i.test(label)) return 'blog';
   if (/data/i.test(label)) return 'data';
   if (/weight|hugging|model/i.test(label)) return 'model';
-  if (url.startsWith('#')) return 'related';
   return 'website';
 }
 
@@ -138,7 +139,13 @@ function sourceRecord(raw, context, metadata) {
   const links = {};
   for (const link of allLinks) if (!links[link.type]) links[link.type] = link.url;
   const cleanCitation = citation.slice(0, markdownLinks(citation)[0]?.start ?? citation.length);
-  const quote = cleanCitation.match(/[“"]([^“”"]{8,})[”"]/);
+  // Preserve names, authors, and publication details that are not part of the
+  // shortened display name or the one-line editorial summary.
+  const citationText = plainText(cleanCitation);
+  // A quoted phrase inside a display name is not a separate paper title.
+  // Tables already put the name/title in their first cell; only bullet
+  // citations use a quoted title after the leading bold model name.
+  const quote = isTable ? null : cleanCitation.replace(LEADING_BOLD, '').match(/[“"]([^“”"]{8,})[”"]/);
   let fullTitle = plainText(quote?.[1] ?? meta.title ?? name).replace(/\.$/, '');
   // Italicized book titles in the foundations have no arXiv metadata.
   if (!quote && !meta.title && collection === 'mind') {
@@ -152,10 +159,14 @@ function sourceRecord(raw, context, metadata) {
   let description = plainText(raw.split('\n').filter((text) => /^\s*>/.test(text)).map((text) => text.replace(/^\s*>\s?/, '')).join(' '));
   let venue = '';
   let domain = '';
+  let sourceFields = [];
   let date = normalizeDate(meta.published);
   let citationYears = [...cleanCitation.matchAll(/\b((?:19|20)\d{2})\b/g)];
   if (isTable) {
     const columns = Object.fromEntries(tableHeader.map((key, i) => [plainText(key).toLowerCase(), cells[i]]));
+    sourceFields = tableHeader.slice(1).map((label, offset) => ({
+      label: plainText(label), value: plainText(cells[offset + 1] ?? ''),
+    })).filter((field) => field.value && !/^links?$/i.test(field.label));
     venue = plainText(columns.venue ?? columns['author / source'] ?? '');
     description = plainText(columns['key contribution'] ?? columns.architecture ?? columns.scope ?? columns['metric focus'] ?? columns.focus ?? '');
     domain = plainText(columns.domain ?? '');
@@ -179,6 +190,8 @@ function sourceRecord(raw, context, metadata) {
     date,
     datePrecision,
     description,
+    citation: citationText,
+    sourceFields,
     venue,
     domain,
     section: currentHeading.label,
@@ -214,6 +227,7 @@ export function buildLibrary(readme, audit) {
   let collection = null;
   let resourceType = null;
   let tableHeader = [];
+  let introductionSection = null;
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     const heading = line.match(/^(#{2,4}) (.+)$/);
@@ -227,23 +241,74 @@ export function buildLibrary(readme, audit) {
             : text.includes('Benchmarks & Evaluation') ? 'benchmarks' : null;
         resourceType = text.includes('Community Resources & Open Repositories') ? 'resource'
           : text.includes('Workshops & Challenges') ? 'workshop'
-            : text.includes('Selected Technical Blogs & Reports') ? 'blogs' : null;
+            : text.includes('Selected Technical Blogs & Reports') ? 'blogs'
+              : text.includes('Labs, Companies & Open Stacks') ? 'organization' : null;
       }
       headings.length = depth + 1;
       const label = headingLabel(text);
       const id = number ? `section-${number.replaceAll('.', '-')}` : `${collection ?? resourceType ?? 'handbook'}-${slug(label)}`;
       headings[depth] = { id, label, line: index + 1 };
       tableHeader = [];
+      introductionSection = collection || resourceType ? id : null;
       if (collection || resourceType) sections.set(id, {
         id, label, collection: collection ?? 'resources', path: headings.filter(Boolean).map(({ label }) => label),
         parentId: headings[depth - 1]?.id ?? null,
         count: 0,
+        description: '',
+        notes: [],
+        source: { url: `${REPOSITORY}/blob/main/README.md#L${index + 1}`, line: index + 1 },
       });
       continue;
     }
     if (!collection && !resourceType) continue;
+    // Editorial H5/H6 notes qualify the surrounding taxonomy rather than
+    // creating another counted research section. Retain their introductory
+    // prose and provenance, and stop before any paper or table begins.
+    const noteHeading = line.match(/^#{5,6} (.+)$/);
+    if (noteHeading) {
+      introductionSection = null;
+      const noteLine = index + 1;
+      const paragraphs = [];
+      let next = index + 1;
+      for (; next < lines.length; next += 1) {
+        const prose = lines[next].trim();
+        if (!prose) continue;
+        if (/^(?:#{1,6}\s|[-*+]\s|[-*_]{3,}$|\d+\.\s|\||<|!\[|\[⬆|```|~~~)/.test(prose) || /^\s/.test(lines[next])) break;
+        paragraphs.push(prose.replace(/^>\s?/, ''));
+      }
+      const raw = [noteHeading[1], ...paragraphs].join('\n');
+      const links = markdownLinks(raw).filter(({ url }) => /^(?:https?:\/\/|#)/.test(url)).map(({ label, url }) => ({
+        label: plainText(label),
+        url: url.startsWith('#') ? `${REPOSITORY}/blob/main/README.md${url}` : url,
+        type: linkType(label, url),
+      }));
+      sections.get(headings.at(-1).id).notes.push({
+        title: plainText(noteHeading[1]),
+        text: plainText(paragraphs.join(' ')),
+        line: noteLine,
+        links,
+        source: { url: `${REPOSITORY}/blob/main/README.md#L${noteLine}`, line: noteLine },
+      });
+      index = next - 1;
+      continue;
+    }
+    // The organization directory also names seven groups in a prose paragraph.
+    // Preserve exactly those names and representative models, with the original
+    // paragraph as provenance; do not invent official websites or openness claims.
+    if (resourceType === 'organization' && line.startsWith('Also tracked across the taxonomy,')) {
+      introductionSection = null;
+      for (const match of line.matchAll(/\*\*([^*]+)\*\*\s*\(([^)]+)\)/g)) {
+        const entry = sourceRecord(`- **${match[1]}** — Representative entries: ${match[2]}.`, {
+          line: index + 1, headings, collection: 'resources', tableHeader: [], resourceType,
+        }, metadata);
+        resources.push(entry);
+        for (const current of headings.filter(Boolean)) sections.get(current.id).count += 1;
+      }
+      continue;
+    }
     if (line.startsWith('|') && !line.startsWith('| **') && !/^\|\s*[-:]+/.test(line)) {
       tableHeader = tableCells(line);
+      introductionSection = null;
       continue;
     }
     const eligibleBullet = line.startsWith('- **') && (['mind', 'generative', 'representational', 'agentic'].includes(collection) || resourceType === 'workshop');
@@ -251,7 +316,23 @@ export function buildLibrary(readme, audit) {
       ['surveys', 'benchmarks'].includes(collection) ||
       ['section-2-1', 'section-3-1'].includes(headings.at(-1)?.id) || resourceType
     );
-    if (!eligibleBullet && !eligibleTable) continue;
+    if (!eligibleBullet && !eligibleTable) {
+      // Only prose directly after this heading belongs to its introduction.
+      // The first entry/table or next heading closes the window, so an entry's
+      // indented summary can never become the section's inclusion criteria.
+      const prose = line.trim();
+      if (introductionSection && prose && !/^\s/.test(line)
+        && !/^(?:[-*_]{3,}$|<|!\[|\||\[⬆|```)/.test(prose)) {
+        const text = plainText(prose.replace(/^>\s?/, ''));
+        if (text) {
+          const section = sections.get(introductionSection);
+          section.description = [section.description, text].filter(Boolean).join(' ');
+          section.descriptionSource ??= { url: `${REPOSITORY}/blob/main/README.md#L${index + 1}`, line: index + 1 };
+        }
+      }
+      continue;
+    }
+    introductionSection = null;
     let raw = line;
     if (eligibleBullet) {
       let next = index + 1;
@@ -295,6 +376,7 @@ export function buildLibrary(readme, audit) {
     projectEntries: readStatistic(readme, 'Official project pages (`Project` badges)'),
     taxonomySections: readStatistic(readme, 'Taxonomy sections and subsections (numbered headings in §0–3)'),
     resources: resources.length,
+    organizations: resources.filter((entry) => entry.kind === 'organization').length,
     crossReferences: entries.filter((entry) => entry.kind === 'cross-reference').length,
     indexedUniqueArxivPapers: indexedIds.length,
   };
