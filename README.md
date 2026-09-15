@@ -17,7 +17,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 
 ## 📰 News
 
-- **[2026-09-16]** 🔎 **Research update.** We have updated the world model research list.
+- **[2026-09-16]** 🔎 **Research update.** We have updated the world model research list with additional papers and refreshed existing entries across the main research areas.
 
 - **[2026-08-25]** 🧭 **Comprehensive refresh.** Handbook front-matter (how to use, reading roadmap, timeline, architecture cheat sheet, glossary, evaluation dimensions, labs, open problems, FAQ, list statistics) plus a large paper pass covering missing classics and July–August 2026 work across games, driving, robotics/WAMs, physics, JEPA, agentic systems, benchmarks, and workshops.
 - **[2026-07-11]** 🎉 **[WorldFoundry](https://github.com/OpenEnvision/WorldFoundry)** and its companion repository **Awesome World Modeling** are now open source! We welcome ⭐ stars, bug reports, feature requests, discussions, and pull requests from the community.
