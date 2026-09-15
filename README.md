@@ -3,19 +3,21 @@
 # 🌍 Awesome World Models
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Modeling?style=social)](https://github.com/OpenEnvision/Awesome-World-Models/stargazers)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/OpenEnvision/Awesome-World-Models/pulls)
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://github.com/OpenEnvision/Awesome-World-Models/blob/main/LICENSE)
-[![Last Updated](https://img.shields.io/badge/Updated-September%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Models/commits/main/README.md)
+[![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Modeling?style=social)](https://github.com/OpenEnvision/Awesome-World-Modeling/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/pulls)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/blob/main/LICENSE)
+[![Last Updated](https://img.shields.io/badge/Updated-September%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/commits/main/README.md)
 
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
-*Latest curation pass: **September 15, 2026**. See the [source audit and coverage notes](curation/2026-09-15.md).*
+*Latest curation pass: **September 16, 2026**. See the [source audit and coverage notes](curation/2026-09-16.md).*
 
 </div>
 
 ## 📰 News
+
+- **[2026-09-16]** 🔎 **Foundations and evaluation follow-up.** Added six missing papers and diagnostics, filled eight entry summaries from primary abstracts, and rechecked reference-list and recent-arXiv exclusions. [Audit and scope notes](curation/2026-09-16.md).
 
 - **[2026-09-15]** 🔎 **Source audit and research update.** Compared the knightnemo reference list and current arXiv search results; added missing foundational and recent papers across the existing taxonomy, corrected wrong paper IDs and changed titles, and expanded evaluation coverage for stochastic outcomes, action ranking, and memory. [Audit, additions, and exclusions](curation/2026-09-15.md).
 
@@ -475,6 +477,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 - **Learning Latent Dynamics for Planning (PlaNet)** — Hafner, D. et al. *ICML* 2019. [![arXiv](https://img.shields.io/badge/arXiv-1811.04551-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/1811.04551) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/google-research/planet)
   > Introduced RSSM (Recurrent State-Space Model): separate deterministic and stochastic latent paths; latent-space cross-entropy planning.
 
+- **Learning to Predict Without Looking Ahead** — Freeman, C. D., Metz, L. & Ha, D. "Learning to Predict Without Looking Ahead: World Models Without Forward Prediction." *NeurIPS* 2019. [![arXiv](https://img.shields.io/badge/arXiv-1910.13038-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/1910.13038)
+  > Uses observational dropout during reinforcement learning to induce an internal world model that fills gaps in observations, without an explicit supervised forward-prediction objective.
+
 - **SimPLe** — Kaiser, Ł. et al. "Model-Based Reinforcement Learning for Atari." *ICLR* 2020. [![arXiv](https://img.shields.io/badge/arXiv-1903.00374-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/1903.00374)
   > First demonstration that a learned video-prediction world model supports sample-efficient Atari agents (~100k interactions); origin of the Atari 100k evaluation protocol.
 
@@ -486,6 +491,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 - **Mastering Atari with Discrete World Models (DreamerV2)** — Hafner, D. et al. *ICLR* 2021. [![arXiv](https://img.shields.io/badge/arXiv-2010.02193-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2010.02193) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/danijar/dreamerv2)
   > Discrete latent variables via straight-through gradients; matches Rainbow DQN with no environment interaction during policy training.
+
+- **Dual Stream World Model (DSWM)** — Juliani, A. & Sereno, M. "A Biologically-Inspired Dual Stream World Model." *arXiv* 2022. [![arXiv](https://img.shields.io/badge/arXiv-2209.08035-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2209.08035)
+  > Separates visual observations into context and content streams inspired by the medial temporal lobe, generating imagined trajectories after one exposure and supporting policy learning through Dyna-like updates.
 
 - **Mastering Diverse Domains with World Models (DreamerV3)** — Hafner, D. et al. (2023). [![arXiv](https://img.shields.io/badge/arXiv-2301.04104-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2301.04104) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/danijar/dreamerv3)
   > Single fixed hyperparameter set generalizing across continuous control, Atari, DMLab, Minecraft, ProcGen, and BSuite.
@@ -589,6 +597,7 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
   > Generates entirely new game experiences via generative interactive video.
 
 - **AnimeGamer** — "AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction." *arXiv* 2504.01014 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2504.01014-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.01014) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://howe125.github.io/AnimeGamer.github.io/)
+  > Predicts action-aware animation-shot representations and character-state updates from language instructions and historical visual context, then decodes the predicted representations into video for interactive anime simulation.
 
 - **Multiplayer Interactive World Models** — "Multiplayer Interactive World Models with Representation Autoencoders." *arXiv* 2607.05352 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.05352-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.05352)
   > Models multiple players' action streams jointly in Rocket League, extending interactive world modeling from single-agent control to tightly coupled multiplayer dynamics.
@@ -795,6 +804,7 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
   > One of the early representative driving world models that tightly couples future visual forecasting and planning.
 
 - **DriveDreamer** — "DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving." *ECCV* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2309.09777-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2309.09777) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/JeffWang987/DriveDreamer)
+  > Learns structured traffic constraints and future driving states through a two-stage diffusion training pipeline, supporting controllable driving-video generation and driving-policy generation from real-world data.
 
 - **MagicDrive** — "MagicDrive: Street View Generation with Diverse 3D Geometry Control." *ICLR* 2024. [![arXiv](https://img.shields.io/badge/arXiv-2310.02601-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.02601) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/cure-lab/MagicDrive)
   > A widely cited controllable street-scene generation baseline close to practical driving world modeling.
@@ -815,22 +825,28 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
   > Uses LLM agents as a symbolic control interlingua for view-consistent, multi-agent driving video generation.
 
 - **GEM** — "GEM: A Generalizable Ego-Vision Multimodal World Model for Fine-Grained Ego-Motion, Object Dynamics, and Scene Composition Control." *arXiv* 2412.11198 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2412.11198-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.11198) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://vita-epfl.github.io/GEM.github.io/)
+  > Predicts paired RGB and depth futures conditioned on reference frames, sparse features, human poses, and ego-trajectories, with autoregressive noise schedules for long-horizon control of ego-motion and object dynamics.
 
 - **MAD** — "MAD: Motion Appearance Decoupling for efficient Driving World Models." *arXiv* 2601.09452 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2601.09452-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.09452) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://vita-epfl.github.io/MAD-World-Model/)
   > Separates motion learning from appearance rendering — a useful efficiency recipe for controllable driving rollouts.
 
 - **ReconDreamer** — "ReconDreamer: Crafting World Models for Driving Scene Reconstruction via Online Restoration." *arXiv* 2411.19548 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2411.19548-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.19548) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://recondreamer.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/GigaAI-research/ReconDreamer)
+  > Integrates world-model priors into driving-scene reconstruction through online artifact restoration and progressive data updates, improving rendering along novel trajectories and large lane-change maneuvers.
 
 - **InfinityDrive** — "InfinityDrive: Breaking Time Limits in Driving World Models." *arXiv* 2412.01522 (2024). [![arXiv](https://img.shields.io/badge/arXiv-2412.01522-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.01522) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://metadrivescape.github.io/papers_project/InfinityDrive/page.html)
+  > Combines spatiotemporal modeling, extended temporal training, and memory injection and retention with an adaptive memory loss to reduce accumulated errors in long driving-video rollouts.
 
 - **LongDWM** — "LongDWM: Cross-Granularity Distillation for Building a Long-Term Driving World Model." *arXiv* 2506.01546 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2506.01546-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.01546) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://wang-xiaodong1899.github.io/longdwm/)
+  > Decouples large-motion and continuous-motion learning and distills fine-grained video flows into coarse-grained flows to improve temporal coherence in long driving-world-model rollouts.
 
 - **Out of Sight but Not Out of Mind** — "Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models." *arXiv* 2603.25716 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2603.25716-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.25716) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/H-EmbodVis/HyDRA)
   > A recent memory-centric update for preserving off-screen dynamics in long driving rollouts.
 
 - **MiLA** — "MiLA: Multi-view Intensive-fidelity Long-term Video Generation World Model for Autonomous Driving." *arXiv* 2503.15875 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2503.15875-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.15875) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://github.com/xiaomi-mlab/mila.github.io)
+  > Uses coarse-to-refine generation, a temporal progressive denoising schedule, and joint denoising and correction to reduce dynamic-object distortions and accumulated errors in long multi-view driving videos.
 
 - **PosePilot** — "PosePilot: Steering Camera Pose for Generative World Models with Self-supervised Depth." *arXiv* 2505.01729 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2505.01729-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.01729)
+  > Adds self-supervised depth and camera-pose readouts, pose-aware frame warping, and geometric losses to improve camera-pose control in diffusion and autoregressive world models.
 
 - **DiST-4D** — "DiST-4D: Disentangled Spatiotemporal Diffusion with Metric Depth for 4D Driving Scene Generation." *ICCV* 2025. [![arXiv](https://img.shields.io/badge/arXiv-2503.15208-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.15208) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/royalmelon0505/dist4d)
 
@@ -3712,6 +3728,7 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 | **State-Space World Models for MBRL** | arXiv 2025 | State-space acceleration for model-based RL | Control | [![arXiv](https://img.shields.io/badge/arXiv-2502.20168-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.20168) |
 | **MoSim** | arXiv 2025 | Neural motion simulator for RL world models | Motion / RL | [![arXiv](https://img.shields.io/badge/arXiv-2504.07095-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.07095) |
 | **Continual RL with Online WMs** | arXiv 2025 | Planning with online world models for continual RL | Control | [![arXiv](https://img.shields.io/badge/arXiv-2507.09177-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.09177) |
+| **World Model Resetting** | ECAI 2024 | Diagnoses overfitting to early data in world models and periodically resets model parameters to improve adaptation in MBPO and DreamerV2. | Model-based control | [![arXiv](https://img.shields.io/badge/arXiv-2310.15017-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.15017) |
 | **QWM** | arXiv 2026 | World-model test-time search on top of standard Q-learning; policy/value trained only on real transitions to avoid compounding model bias | Robot manipulation (Robomimic, LIBERO) | [![arXiv](https://img.shields.io/badge/arXiv-2608.17163-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.17163) |
 
 ---
@@ -3862,6 +3879,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 - **IMWM** — "IMWM: Intuition Models Complement World Models for Latent Planning." *arXiv* 2606.01626 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.01626-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.01626)
   > Pairs a learned latent world model with an intuition model to reduce finite-budget planning failures from raw pixels.
+
+- **Dream and Search to Control** — Koul, A. et al. "Dream and Search to Control: Latent Space Planning for Continuous Control." *arXiv* 2020. [![arXiv](https://img.shields.io/badge/arXiv-2010.09832-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2010.09832)
+  > Uses tree-based planning over learned latent dynamics for continuous-action control, bootstrapping policy learning and supporting planning at test time.
 
 ---
 
@@ -4643,6 +4663,8 @@ Three cautions, all documented in entries here:
 | **PlayWorld** | Interactive video | Agent Players pursue 171 long-horizon objectives; geometry consistency, interaction fidelity, out-of-sight and insight evolution | [![arXiv](https://img.shields.io/badge/arXiv-2608.13552-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.13552) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://kxding.github.io/project/PlayWorld/) |
 | **HarnessEval-W** | Visual world models | Agentified harness-style evaluation: 330 cases decomposed into sub-agent diagnoses with verifiable evidence trees over 18 world models | [![arXiv](https://img.shields.io/badge/arXiv-2608.16859-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.16859) |
 | **WorldRoamBench (formerly WorldOdysseyBench)** | Interactive video | 600+ open-world cases, 10-60 s WASD interaction; per-frame action metric, segment drift, controllability-gated physics, trajectory-aware scene/subject memory | [![arXiv](https://img.shields.io/badge/arXiv-2606.31672-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31672) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://worldroam.amap.com/) |
+| **ActionReasoningBench** | Symbolic state transitions / action reasoning | Diagnostic benchmark for fluent and state tracking, action executability, direct and indirect action effects, and numerical reasoning; evaluates components of symbolic world models rather than learned visual simulation. | [![arXiv](https://img.shields.io/badge/arXiv-2406.04046-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.04046) |
+| **PlanBench** | Symbolic planning / reasoning about change | Uses automated-planning domains to test plan generation and reasoning about actions and state changes; a downstream planning diagnostic, not a direct measure of learned world-model fidelity. | [![arXiv](https://img.shields.io/badge/arXiv-2206.10498-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2206.10498) |
 
 [⬆ Back to Top](#-table-of-contents)
 
@@ -4954,12 +4976,12 @@ Search the page for the arXiv ID (the `arXiv` badge label carries the full ID). 
 
 | Statistic | Value |
 | --- | --- |
-| Unique arXiv papers | 1492 |
-| Total curated entries (taxonomy bullets + §2.1 / §3.1 / Surveys / Benchmarks table rows) | 1551 |
+| Unique arXiv papers | 1498 |
+| Total curated entries (taxonomy bullets + §2.1 / §3.1 / Surveys / Benchmarks table rows) | 1557 |
 | Entries with official code (`GitHub` badges) | 388 |
 | Official project pages (`Project` badges) | 410 |
 | Taxonomy sections and subsections (numbered headings in §0–3) | 44 |
-| Benchmarks tracked | 91 |
+| Benchmarks tracked | 93 |
 | Surveys & position papers tracked | 84 |
 | Glossary terms | 37 |
 | Open problems | 12 |
@@ -4982,7 +5004,7 @@ If you find this repository useful in your research, please cite this curated li
   author={{OpenEnvision}},
   year={2026},
   howpublished={GitHub repository},
-  url={https://github.com/OpenEnvision/Awesome-World-Models},
+  url={https://github.com/OpenEnvision/Awesome-World-Modeling},
   note={A scope-aware, paper-first curated list of world model research}
 }
 ```
@@ -4991,7 +5013,7 @@ If you find this repository useful in your research, please cite this curated li
 
 ## 🤝 Contribution Guide
 
-PRs are welcome. For lightweight suggestions, open a [paper suggestion issue](https://github.com/OpenEnvision/Awesome-World-Models/issues/new?template=paper.yml). For curated additions or taxonomy changes, please open a pull request and follow [CONTRIBUTING.md](CONTRIBUTING.md).
+PRs are welcome. For lightweight suggestions, open a [paper suggestion issue](https://github.com/OpenEnvision/Awesome-World-Modeling/issues/new?template=paper.yml). For curated additions or taxonomy changes, please open a pull request and follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 The preferred entry format (matching the rest of this file) is:
 

@@ -76,7 +76,7 @@ test('relative source documents and legacy repository links use the canonical re
 });
 
 test('fenced examples preserve source URLs and escape markup', () => {
-  assert.match(chapter('citation').html, /url=\{https:\/\/github\.com\/OpenEnvision\/Awesome-World-Models\}/);
+  assert.match(chapter('citation').html, /url=\{https:\/\/github\.com\/OpenEnvision\/Awesome-World-Modeling\}/);
   assert.match(chapter('contribution-guide').html, /\[!\[arXiv\]\(https:\/\/img\.shields\.io/);
   assert.doesNotMatch(chapter('contribution-guide').html.match(/<pre>[\s\S]*?<\/pre>/)?.[0] ?? '', /<a\b|<img\b/);
 });
