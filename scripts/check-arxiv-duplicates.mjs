@@ -17,12 +17,12 @@ const allowlist = fs.existsSync(allowlistPath)
   ? JSON.parse(readText(allowlistPath))
   : {};
 
-const arxivLinkPattern = /arxiv\.org\/(?:abs|pdf)\/([a-z-]+\/\d{7}|[0-9]{4}\.[0-9]{4,5})(v\d+)?/gi;
+const arxivLinkPattern = /arxiv\.org\/(?:abs|pdf|html)\/([a-z.-]+\/\d{7}|[0-9]{4}\.[0-9]{4,5})(v\d+)?/gi;
 const occurrences = new Map();
 
 let match;
 while ((match = arxivLinkPattern.exec(readme)) !== null) {
-  const id = normalizeArxivId(`${match[1]}${match[2] ?? ''}`);
+  const id = normalizeArxivId(`${match[1]}${match[2] ?? ''}`).toLowerCase();
   const line = lineNumberAt(readme, match.index);
   const links = occurrences.get(id) ?? [];
   links.push(line);

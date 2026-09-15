@@ -61,13 +61,16 @@ Before opening a PR, please check:
 
 ```bash
 node scripts/check-arxiv-duplicates.mjs README.md
-npx markdown-link-check -q -c .github/markdown-link-check.json README.md
-npx awesome-lint
+node scripts/check-list-stats.mjs README.md
 ```
 
 If a paper intentionally appears in more than one section, add its arXiv ID to `.github/arxiv-duplicate-allowlist.json` with a short reason.
 
-`awesome-lint` and Markdown link checking are currently advisory in CI because the repository uses long taxonomy tables and many external research links. The custom arXiv duplicate check is strict.
+After adding entries, refresh the statistics with `node scripts/check-list-stats.mjs --update README.md`, then run both checks above. The statistics count paper bullets only within sections 0–3; explanatory bullets, news, and glossary terms are not papers.
+
+CI runs both checks, including agreement between arXiv badge IDs and their links. Online link checks are separate: verify new paper titles and identifiers against their arXiv abstract pages and check official project/code links before adding them. An HTTP success response alone does not establish that a link points to the intended paper.
+
+Record the search date, reference sources, included papers, exclusions, and unresolved checks in a dated file under `curation/`. Distinguish original submission dates from later revisions and announcement months; do not infer a submission date from the arXiv ID.
 
 ## Taxonomy Changes
 
@@ -76,3 +79,7 @@ Open a PR for taxonomy changes only when the change improves navigation for mult
 ## License
 
 By contributing, you agree that your contributions are released under the repository license, CC0-1.0.
+
+## Website
+
+The OpenEnvision Library website is generated from this README. See [WEBSITE.md](WEBSITE.md) for local preview, validation, and GitHub Pages deployment. After a list update, run `npm run build` and commit the regenerated `site/data/library.json` with the README changes.

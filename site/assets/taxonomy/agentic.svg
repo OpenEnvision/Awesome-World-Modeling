@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" role="img" aria-labelledby="title desc">
+  <title id="title">Plan and act through imagined world-model rollouts</title>
+  <desc id="desc">The agent observes its environment. A world model simulates candidate futures, and a planner uses those imagined rollouts to choose an action. The environment responds with a new observation, closing the interaction loop.</desc>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 7 3.5 0 7" fill="none" stroke="#171717" stroke-width="1.3"/></marker><marker id="red-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 7 3.5 0 7" fill="none" stroke="#ce352c" stroke-width="1.3"/></marker></defs>
+  <g fill="none" stroke="#171717" stroke-width="1.5" marker-end="url(#arrow)"><path d="M161 47v19"/><path d="M161 105v19"/><path d="M161 163v19"/><path d="M161 221v19"/><path d="M161 279v14"/></g>
+  <path d="M78 313H32V28h45" fill="none" stroke="#ce352c" stroke-width="1.5" marker-end="url(#red-arrow)"/>
+  <g fill="#fff" stroke="#171717" stroke-width="1.5"><rect x="78" y="9" width="166" height="38"/><rect x="78" y="67" width="166" height="38"/><rect x="78" y="125" width="166" height="38"/><rect x="78" y="241" width="166" height="38"/><rect x="78" y="294" width="166" height="38"/></g>
+  <rect x="78" y="183" width="166" height="38" fill="#fcf0ee" stroke="#ce352c" stroke-width="1.5"/>
+  <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle" fill="#171717"><text x="161" y="34" font-size="15">Observation</text><text x="161" y="92" font-size="15">World model</text><text x="161" y="150" font-size="15">Imagined rollouts</text><text x="161" y="208" font-size="16">Planner / policy</text><text x="161" y="266" font-size="15">Action</text><text x="161" y="319" font-size="15">Environment</text></g>
+  <text x="18" y="172" transform="rotate(-90 18 172)" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#ce352c" text-anchor="middle">observe the outcome</text>
+  <text x="161" y="352" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle" fill="#62656b">Simulate, choose, act, observe.</text>
+</svg>

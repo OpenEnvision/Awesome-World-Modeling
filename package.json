@@ -1,0 +1,14 @@
+{
+  "name": "awesome-world-modeling-library",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build-site-data.mjs && node scripts/build-site.mjs",
+    "dev": "npm run build && node scripts/serve-site.mjs",
+    "preview": "node scripts/serve-site.mjs",
+    "test": "node scripts/check-arxiv-duplicates.mjs && node scripts/check-list-stats.mjs && node scripts/test-site-data.mjs && node --test scripts/site.test.mjs"
+  }
+}

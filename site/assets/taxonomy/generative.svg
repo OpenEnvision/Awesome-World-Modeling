@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" role="img" aria-labelledby="title desc">
+  <title id="title">Generate future observations from a conditioned world model</title>
+  <desc id="desc">Past observations and an optional action condition a generative world model. It produces a sequence of future observations, illustrated as three successive frames. This is a conceptual pattern rather than a specific network architecture.</desc>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 7 3.5 0 7" fill="none" stroke="#171717" stroke-width="1.3"/></marker></defs>
+  <g stroke="#171717" stroke-width="1.5" fill="#fff"><rect x="23" y="28" width="128" height="42"/><rect x="177" y="28" width="100" height="42"/></g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="14" text-anchor="middle" fill="#171717"><text x="87" y="54">Observation</text><text x="227" y="54">Action</text></g>
+  <text x="227" y="19" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle" fill="#62656b">optional</text>
+  <g fill="none" stroke="#171717" stroke-width="1.5" marker-end="url(#arrow)"><path d="M87 70v35h20v26"/><path d="M227 70v35h-34v26"/></g>
+  <rect x="49" y="132" width="202" height="70" fill="#fcf0ee" stroke="#ce352c" stroke-width="1.5"/>
+  <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle"><text x="150" y="162" font-size="16" fill="#171717">Generative model</text><text x="150" y="185" font-size="12" fill="#62656b">conditioned future dynamics</text></g>
+  <path d="M150 202v29" fill="none" stroke="#171717" stroke-width="1.5"/>
+  <g fill="none" stroke="#171717" stroke-width="1.5" marker-end="url(#arrow)"><path d="M150 231H59v32"/><path d="M150 231v32"/><path d="M150 231h91v32"/></g>
+  <g fill="#fff" stroke="#171717" stroke-width="1.5"><rect x="23" y="264" width="72" height="48"/><rect x="114" y="264" width="72" height="48"/><rect x="205" y="264" width="72" height="48"/></g>
+  <g stroke="#dddfe2" stroke-width="1.2"><path d="M29 300h60M120 300h60M211 300h60"/></g>
+  <g fill="#fcf0ee" stroke="#ce352c" stroke-width="1.5"><circle cx="43" cy="286" r="7"/><circle cx="150" cy="283" r="7"/><circle cx="255" cy="288" r="7"/></g>
+  <g font-family="SFMono-Regular,Consolas,monospace" font-size="12" text-anchor="middle" fill="#62656b"><text x="59" y="332">t + 1</text><text x="150" y="332">t + 2</text><text x="241" y="332">t + 3</text></g>
+  <text x="150" y="352" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle" fill="#62656b">Future observations</text>
+</svg>
