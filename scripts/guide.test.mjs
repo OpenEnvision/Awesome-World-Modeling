@@ -33,7 +33,7 @@ test('source lines, original dates, and repeated builds are deterministic', () =
     assert.equal(item.sourceUrl, `${guide.repository}/blob/main/README.md#L${item.sourceLine}`);
   }
   assert.equal(guide.updatedAt, library.updatedAt);
-  assert.match(chapter('news').html, /2026-09-15/);
+  assert.match(chapter('news').html, /2026-09-16/);
   assert.match(chapter('list-statistics').html, /September 15, 2026/);
   assert.deepEqual(buildGuide(readme, library), guide);
 });
@@ -72,7 +72,8 @@ test('relative source documents and legacy repository links use the canonical re
   const contribution = chapter('contribution-guide').html;
   assert.match(contribution, /href="https:\/\/github\.com\/OpenEnvision\/Awesome-World-Modeling\/blob\/main\/CONTRIBUTING\.md"/);
   assert.match(contribution, /href="https:\/\/github\.com\/OpenEnvision\/Awesome-World-Modeling\/issues\/new\?template=paper\.yml"/);
-  assert.match(chapter('news').html, /href="https:\/\/github\.com\/OpenEnvision\/Awesome-World-Modeling\/blob\/main\/curation\/2026-09-15\.md"/);
+  const auditFixture = buildGuide(readme.replace('## 📰 News\n', '## 📰 News\n\n[Audit](curation/2026-09-15.md)\n'), library);
+  assert.match(auditFixture.chapters.find(item => item.id === 'news').html, /href="https:\/\/github\.com\/OpenEnvision\/Awesome-World-Modeling\/blob\/main\/curation\/2026-09-15\.md"/);
 });
 
 test('fenced examples preserve source URLs and escape markup', () => {

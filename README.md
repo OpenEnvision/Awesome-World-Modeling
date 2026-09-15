@@ -17,10 +17,7 @@ Organized by paradigm first, then by domain, representation, and downstream use.
 
 ## 📰 News
 
-- **[2026-09-16]** 🔎 **Foundations and evaluation follow-up.** Added six missing papers and diagnostics, filled eight entry summaries from primary abstracts, and rechecked reference-list and recent-arXiv exclusions. [Audit and scope notes](curation/2026-09-16.md).
-
-- **[2026-09-15]** 🔎 **Source audit and research update.** Compared the knightnemo reference list and current arXiv search results; added missing foundational and recent papers across the existing taxonomy, corrected wrong paper IDs and changed titles, and expanded evaluation coverage for stochastic outcomes, action ranking, and memory. [Audit, additions, and exclusions](curation/2026-09-15.md).
-
+- **[2026-09-16]** 🔎 **Research update.** We have updated the world model research list.
 
 - **[2026-08-25]** 🧭 **Comprehensive refresh.** Handbook front-matter (how to use, reading roadmap, timeline, architecture cheat sheet, glossary, evaluation dimensions, labs, open problems, FAQ, list statistics) plus a large paper pass covering missing classics and July–August 2026 work across games, driving, robotics/WAMs, physics, JEPA, agentic systems, benchmarks, and workshops.
 - **[2026-07-11]** 🎉 **[WorldFoundry](https://github.com/OpenEnvision/WorldFoundry)** and its companion repository **Awesome World Modeling** are now open source! We welcome ⭐ stars, bug reports, feature requests, discussions, and pull requests from the community.
