@@ -1791,6 +1791,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 - **Kairos** — "Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI." *arXiv* 2606.16533 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.16533-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.16533)
   > Combines cross-embodiment pretraining and multi-timescale state maintenance for control-relevant world-action prediction.
 
+- **MolmoMotion** — "MolmoMotion: Forecasting Point Trajectories in 3D with Language Instruction." *NeurIPS 2026 Spotlight*. [![arXiv](https://img.shields.io/badge/arXiv-2606.18558-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.18558)
+  > Forecasts dense 3D point trajectories conditioned on language instruction, framing language-guided future prediction as a world-modeling objective for embodied AI.
+
 - **GaussianDream** — "GaussianDream: A Feed-Forward 3D Gaussian World Model for Robotic Manipulation." *arXiv* 2605.20752 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2605.20752-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.20752)
   > Supervises VLA latent queries with current 3D Gaussian structure and future Gaussian evolution during training.
 
