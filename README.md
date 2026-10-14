@@ -3400,7 +3400,7 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 - **Delta-JEPA** — "Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding." *arXiv* 2606.31232 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.31232-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.31232)
   > Decodes action-sensitive latent differences to make the predictive representation reflect controllable state changes rather than action-insensitive dynamics.
 
-- **Qantara** — "Qantara: Bridge-Flow Training for Multi-Paradigm JEPA Control." *arXiv* 2607.04978 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.04978-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.04978)
+- **Qantara** — "Qantara: Bridge-Flow Training for Multi-Paradigm JEPA Inference." *arXiv* 2607.04978 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2607.04978-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.04978)
   > Trains one JEPA checkpoint to support latent planning, behavior cloning, and inverse dynamics through bridge-flow objectives.
 
 - **FF-JEPA** — "FF-JEPA: Long-Horizon Planning in World Models with Latent Planners." *arXiv* 2606.09311 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2606.09311-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.09311)
