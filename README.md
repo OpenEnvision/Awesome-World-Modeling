@@ -6,16 +6,20 @@
 [![GitHub stars](https://img.shields.io/github/stars/OpenEnvision/Awesome-World-Modeling?style=social)](https://github.com/OpenEnvision/Awesome-World-Modeling/stargazers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/pulls)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/blob/main/LICENSE)
-[![Last Updated](https://img.shields.io/badge/Updated-September%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/commits/main/README.md)
+[![Last Updated](https://img.shields.io/badge/Updated-October%202026-green.svg)](https://github.com/OpenEnvision/Awesome-World-Modeling/commits/main/README.md)
 
 **A scope-aware, paper-first curated list of world model research.**
 Organized by paradigm first, then by domain, representation, and downstream use.
 
 *Latest curation pass: **September 16, 2026**. See the [source audit and coverage notes](curation/2026-09-16.md).*
 
+*Latest incremental update: **October 16, 2026** — eight verified additions. See the [October source audit](curation/2026-10-16.md).*
+
 </div>
 
 ## 📰 News
+
+- **[2026-10-16]** 🔎 **October additions.** Added eight papers on cross-domain latent actions, persistent scene/event memory, object-state prediction, spatial representations, world-action reasoning, multiplayer simulation, navigation-conditioned imagination, and tool-outcome prediction.
 
 - **[2026-09-16]** 🔎 **Research update.** We have updated the world model research list with additional papers and refreshed existing entries across the main research areas.
 
@@ -1710,6 +1714,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 > World Action Models jointly predict futures *and* actions in one backbone, often initialized from video generation. This subsection also includes VLAs with an explicit world-model head, latent-action pretraining from action-free video, and predict-then-act image-editing planners. Generic VLAs that map observation + language directly to actions without a dynamics component are out of scope — see [Definition and Scope](#definition-and-scope) and the *VLA vs. WAM* glossary entry.
 
+- **Atomic-WAM** — Shi, S. et al. "Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models." *arXiv* 2610.20157 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20157-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20157) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://ssj9596.github.io/Atomic-WAM-project/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/ssj9596/Atomic-WAM)
+  > Uses a vision-language reasoner's atomic-motion descriptions to condition joint future-video and action-chunk prediction, then post-trains the reasoner with execution feedback from a fixed WAM.
+
 - **DIDO** — "DIDO: Distilling Interaction-Centric Dynamics into One-Step Denoising for World Action Models." *arXiv* 2609.15570 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.15570-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.15570)
   > Distills multi-step WAM denoising into one step with interaction-focused gripper and object supervision, preserving manipulation dynamics while reducing control latency.
 
@@ -2994,6 +3001,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 > Video foundation models and rollout recipes that are repeatedly used as the backbone for interactive, embodied, or long-horizon world models. Generic video generation is still filtered out unless the paper explicitly targets control, causality, memory, or world-model conversion.
 
+- **OneLA** — Zhu, Z. et al. "OneLA: Learning Many Worlds from Latent Actions." *arXiv* 2610.20160 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20160-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20160) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://fantasy-amap.github.io/OneLA/)
+  > Learns cross-domain continuous latent actions through a shared orthogonal dictionary and conditions visual state transitions on them, with lightweight adapters mapping native controls into the shared action space.
+
 - **Off-Manifold Refinement** — "Off-Manifold Refinement: Guiding Video Generators with a Frozen World Model." *arXiv* 2608.29904 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2608.29904-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.29904) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://itruonghai.github.io/omr)
   > Guides one video-sampling trajectory with gradients of frozen V-JEPA surprise through a trained latent-to-embedding adapter, improving measured physical plausibility without updating the generator or world model.
 
@@ -3182,6 +3192,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
   > Continues a world story by conditioning each extension on its own previously generated audio-visual history, with noise-level-aware residual correction to keep multi-shot, multi-subject, reference-guided rollouts stable at minute scale.
 
 #### 1.7.2 Persistent Cross-Shot State & Memory
+
+- **ATAS** — Wang, W. et al. "Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation." *arXiv* 2610.20571 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20571-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20571) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://lhmd.top/atas/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/ziplab/ATAS)
+  > Conditions shot generation on registered scene geometry and time-indexed event memories, updating them with accepted reconstructed clips to support spatial revisits and event replay across nonconsecutive shots.
 
 - **StoryMem** — "StoryMem: Multi-shot Long Video Storytelling with Memory." *arXiv* 2512.19539 (2025). [![arXiv](https://img.shields.io/badge/arXiv-2512.19539-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.19539) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Kevin-thu/StoryMem) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://kevin-thu.github.io/StoryMem/)
   > Keeps a dynamically updated memory of keyframes selected from previously generated shots and conditions a memory-to-video model on it when producing each subsequent shot under its own prompt, so later shots inherit scene and character appearance from earlier ones.
@@ -3512,6 +3525,14 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
   > Disentangles ego-motion from scene dynamics in BEV latent world models, freeing capacity for scene modeling and enabling zero-shot transfer across vehicle chassis.
 
 ### 2.4 Multimodal, Text, Acoustic & Memory-Oriented World Models
+
+- **GeoThinker-F** — Li, H. et al. "GeoThinker-$F$: Endogenous Predictive World Representations for Fast Spatial Intelligence." *arXiv* 2610.20592 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20592-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20592) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/Li-Hao-yuan/GeoThinker)
+  > Predicts current-geometry and next-frame semantic latents from causal MLLM hidden states and fuses them for spatial reasoning, avoiding an external geometry encoder at inference.
+  > **Domain:** Spatial reasoning; short-horizon predictive representations.
+
+- **ObjDream** — Ma, H. et al. "ObjDream: Guiding Vision-Language-Action Models with Object-Level Understanding and Future State Prediction." *arXiv* 2610.20223 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20223-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20223) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://huailiangma.github.io/objdream/)
+  > Separates object identity and dynamic state in temporal slots and learns action-conditioned future-object states as training supervision for manipulation, without requiring future prediction at inference.
+  > **Domain:** Robotic manipulation; object-centric predictive representations.
 
 - **LPA-CWM** — "LPA-CWM: A Learned Physical Adjudicator for Motion Reasoning with Counterfactual World Models." *arXiv* 2609.14073 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.14073-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.14073) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://LPA-CWM.github.io)
   > Learns reliability weights over factual and intervened video-prediction responses to recover motion, with completeness-aware evaluation of correspondence and tracking.
@@ -4086,6 +4107,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 ### 3.4 Multi-Agent World Models
 
+- **PAWA** — Yang, S. et al. "PAWA: Panoramic Action-conditioned World Modeling for Multiple Agents." *arXiv* 2610.20240 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20240-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20240) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://pawa.siki.moe/) [![GitHub](https://img.shields.io/badge/GitHub-Pipeline-181717?logo=github&logoColor=white)](https://github.com/yousiki/pawa-pipeline)
+  > Jointly predicts each player's first-person and world-stabilized panoramic videos from all players' actions using ray-aligned cross-attention, paired with a synchronized multiplayer Minecraft dataset and released data pipeline.
+
 - **HORIZON** — "Hierarchical Belief Modeling for Zero-Shot Opponent Adaptation in Partially Observable Multi-Agent Navigation." *arXiv* 2609.12422 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.12422-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.12422)
   > Combines hierarchical belief and opponent modeling with action-conditioned next-state raster prediction as auxiliary supervision for adaptive multi-agent policies in partially observed Lux AI games.
 
@@ -4156,6 +4180,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 <a id="35-safety-aware-agentic-world-models"></a>
 
 ### 3.5 🛡️ Safety-Aware Agentic World Models
+
+- **SafeDriveVLA** — Xie, S. et al. "SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving." *CoRL* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2610.20609-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20609) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://safedrive-vla.github.io/SafeDriveVLA/) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/ASGuard-UCI/safedrive-vla)
+  > Uses scene latents dreamed under actions that strictly execute a navigation instruction to predict compliance modes, helping a driving VLA recognize navigation-scene conflicts before acting.
 
 - **When the World Lies** — "When the World Lies: Backdoor Attacks on Latent World Models for Downstream Control." *arXiv* 2609.15781 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.15781-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.15781)
   > Studies checkpoint backdoors that reshape latent dynamics and redirect downstream imagination-trained policies or planners while preserving useful clean-task behavior.
@@ -4252,6 +4279,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
   > Proactive guardrail built on a recurrent risk-aware latent world model that forecasts multi-horizon hazard evidence before action execution, achieving the best safety-utility trade-off at ~25 ms per call.
 
 ### 3.6 LLM / VLM / GUI Agents with World Models
+
+- **PreActIR** — Zhang, X. et al. "Look Before You Restore: Learning to Predict Before Acting for Agentic Image Restoration." *arXiv* 2610.20384 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2610.20384-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.20384)
+  > Predicts tool-conditioned changes in degradation, quality, and fidelity before selecting image-restoration calls, then verifies each result before committing the state and replanning.
 
 - **VeriScene** — "VeriScene: Reconstructing Crime Scenes from Legal Evidence via World-Model Agent." *arXiv* 2609.08342 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.08342-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.08342)
   > Orchestrates evidence-grounded scene reconstruction and dynamic probe rollouts, using explicit constraints and audits before rendering a hypothesized physical reenactment.
@@ -4973,10 +5003,10 @@ Search the page for the arXiv ID (the `arXiv` badge label carries the full ID). 
 
 | Statistic | Value |
 | --- | --- |
-| Unique arXiv papers | 1498 |
-| Total curated entries (taxonomy bullets + §2.1 / §3.1 / Surveys / Benchmarks table rows) | 1557 |
-| Entries with official code (`GitHub` badges) | 388 |
-| Official project pages (`Project` badges) | 410 |
+| Unique arXiv papers | 1506 |
+| Total curated entries (taxonomy bullets + §2.1 / §3.1 / Surveys / Benchmarks table rows) | 1565 |
+| Entries with official code (`GitHub` badges) | 393 |
+| Official project pages (`Project` badges) | 416 |
 | Taxonomy sections and subsections (numbered headings in §0–3) | 44 |
 | Benchmarks tracked | 93 |
 | Surveys & position papers tracked | 84 |
