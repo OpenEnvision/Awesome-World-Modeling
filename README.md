@@ -563,6 +563,9 @@ Reading the table: the top half trades **fidelity against control** (diffusion v
 
 #### 1.1.2 Autoregressive Transformer Models
 
+- **FlockWorld** — Koksal, M. et al. "FlockWorld: Toward Population-Scale Multi-Agent Video World Models through Artificial Life Simulation." *NeurIPS* 2026. [![arXiv](https://img.shields.io/badge/arXiv-2610.34564-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.34564) [![GitHub](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/wangyz1999/flockworld)
+  > Boids-based artificial life environment rendering synchronized egocentric views for a configurable number of camera agents, paired with FlockDiT, an action-conditioned diffusion transformer that jointly generates all agents' views and uses diffusion forcing for autoregressive rollouts.
+
 - **ActionSplice** — "ActionSplice: In-Flight Action Editing for Interactive World Models." *arXiv* 2609.08230 (2026). [![arXiv](https://img.shields.io/badge/arXiv-2609.08230-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.08230) [![Project](https://img.shields.io/badge/Project-Page-0A66C2?logo=googlechrome&logoColor=white)](https://pardistaghavi.github.io/actionsplice-website/)
   > Edits actions during chunk sampling by transporting intermediate states toward the revised action, supporting whole-chunk retargeting or suffix-only updates without replaying completed sampler steps.
 
@@ -4973,9 +4976,9 @@ Search the page for the arXiv ID (the `arXiv` badge label carries the full ID). 
 
 | Statistic | Value |
 | --- | --- |
-| Unique arXiv papers | 1498 |
-| Total curated entries (taxonomy bullets + §2.1 / §3.1 / Surveys / Benchmarks table rows) | 1557 |
-| Entries with official code (`GitHub` badges) | 388 |
+| Unique arXiv papers | 1499 |
+| Total curated entries (taxonomy bullets + §2.1 / §3.1 / Surveys / Benchmarks table rows) | 1558 |
+| Entries with official code (`GitHub` badges) | 389 |
 | Official project pages (`Project` badges) | 410 |
 | Taxonomy sections and subsections (numbered headings in §0–3) | 44 |
 | Benchmarks tracked | 93 |
